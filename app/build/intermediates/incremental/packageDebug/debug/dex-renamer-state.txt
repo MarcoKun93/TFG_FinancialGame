@@ -1,0 +1,4 @@
+#Sun Feb 11 23:43:24 CET 2018
+base.0=F\:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

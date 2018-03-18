@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\raw\\time_running_out.flac",
+        "source": "F:\\AndroidStudioProjects\\FinancialGame\\app\\src\\main\\res\\raw\\time_running_out.flac"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\raw\\timbrev1.mp3",
+        "source": "F:\\AndroidStudioProjects\\FinancialGame\\app\\src\\main\\res\\raw\\timbrev1.mp3"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\raw\\start_ring.wav",
+        "source": "F:\\AndroidStudioProjects\\FinancialGame\\app\\src\\main\\res\\raw\\start_ring.wav"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\raw\\end_turn.mp3",
+        "source": "F:\\AndroidStudioProjects\\FinancialGame\\app\\src\\main\\res\\raw\\end_turn.mp3"
+    }
+]

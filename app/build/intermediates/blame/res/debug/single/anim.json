@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\usuario\\.android\\build-cache\\e2af24e1fb9028e2667b91845dc0d766a460533b\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\usuario\\.android\\build-cache\\e2af24e1fb9028e2667b91845dc0d766a460533b\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\usuario\\.android\\build-cache\\e2af24e1fb9028e2667b91845dc0d766a460533b\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\usuario\\.android\\build-cache\\e2af24e1fb9028e2667b91845dc0d766a460533b\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\usuario\\.android\\build-cache\\e2af24e1fb9028e2667b91845dc0d766a460533b\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\usuario\\.android\\build-cache\\e2af24e1fb9028e2667b91845dc0d766a460533b\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\usuario\\.android\\build-cache\\e2af24e1fb9028e2667b91845dc0d766a460533b\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\scaleinout_normal.xml",
+        "source": "F:\\AndroidStudioProjects\\FinancialGame\\app\\src\\main\\res\\anim\\scaleinout_normal.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\stop.xml",
+        "source": "F:\\AndroidStudioProjects\\FinancialGame\\app\\src\\main\\res\\anim\\stop.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\usuario\\.android\\build-cache\\e2af24e1fb9028e2667b91845dc0d766a460533b\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\scaleinout_rapido.xml",
+        "source": "F:\\AndroidStudioProjects\\FinancialGame\\app\\src\\main\\res\\anim\\scaleinout_rapido.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\scaleinout_lento.xml",
+        "source": "F:\\AndroidStudioProjects\\FinancialGame\\app\\src\\main\\res\\anim\\scaleinout_lento.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\usuario\\.android\\build-cache\\e2af24e1fb9028e2667b91845dc0d766a460533b\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\usuario\\.android\\build-cache\\e2af24e1fb9028e2667b91845dc0d766a460533b\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\res\\merged\\debug\\anim\\girar.xml",
+        "source": "F:\\AndroidStudioProjects\\FinancialGame\\app\\src\\main\\res\\anim\\girar.xml"
+    }
+]

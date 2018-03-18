@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/fragment_contenedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="97.07"
+                android:alpha="0.5">
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/botonIniciar"
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_weight="97.07"
+                android:background="@android:color/transparent"
+                android:onClick="iniciarTemporizador"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/botonstartv2" />
+
+            <TextView
+                android:id="@+id/numRondas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="1"
+                android:text="Número de rondas: 0"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/rankingJugadores"
+                android:layout_width="wrap_content"
+                android:layout_height="220dp"
+                android:fadeScrollbars="false"
+                android:fastScrollAlwaysVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:scrollbarAlwaysDrawVerticalTrack="true" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="casual"
+                android:padding="10dp"
+                android:text="Introduzca los nombres de los jugadores"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/nombreJugador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:capitalize="none"
+                android:ems="10"
+                android:hint="Nombre del jugador"
+                android:inputType="textCapSentences|textPersonName"
+                android:selectAllOnFocus="false"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/confirmaPersonaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="añadirJugador"
+                android:text="Confirmar" />
+
+            <Spinner
+                android:id="@+id/JugadoresRegistrados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="casual"
+                android:padding="5dp"
+                android:text="Número de rondas:"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/numeroRondas"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp" />
+
+            <ImageButton
+                android:id="@+id/iniciarPartida"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="0dp"
+                android:background="@android:color/transparent"
+                android:onClick="iniciarPartida"
+                android:padding="0dp"
+                android:saveEnabled="false"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/botonstartv1" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

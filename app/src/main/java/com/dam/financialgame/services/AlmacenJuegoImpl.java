@@ -1,10 +1,13 @@
-package com.dam.financialgame;
+package com.dam.financialgame.services;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import com.dam.financialgame.Escenario;
+import com.dam.financialgame.iservices.almacenJuego;
 
 import java.util.Collections;
 import java.util.Vector;

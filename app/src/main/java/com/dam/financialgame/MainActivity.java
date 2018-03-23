@@ -12,7 +12,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.view.Gravity;
 
-import com.dam.financialgame.R;
+import com.dam.financialgame.services.AlmacenJuegoImpl;
 
 import java.util.Vector;
 

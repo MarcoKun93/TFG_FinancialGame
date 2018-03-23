@@ -18,7 +18,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.dam.financialgame.R;
+import com.dam.financialgame.services.AlmacenJuegoImpl;
 
 import java.util.Collections;
 import java.util.Vector;

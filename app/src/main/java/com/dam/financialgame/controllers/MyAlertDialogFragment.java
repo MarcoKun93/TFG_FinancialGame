@@ -1,4 +1,4 @@
-package com.dam.financialgame;
+package com.dam.financialgame.controllers;
 
 import android.app.DialogFragment;
 import android.os.Bundle;

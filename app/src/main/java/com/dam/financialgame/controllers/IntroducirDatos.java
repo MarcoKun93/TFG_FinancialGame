@@ -1,4 +1,4 @@
-package com.dam.financialgame;
+package com.dam.financialgame.controllers;
 
 import android.app.DialogFragment;
 import android.app.Fragment;
@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.dam.financialgame.R;
 import com.dam.financialgame.services.AlmacenJuegoImpl;
 
 import java.util.Vector;

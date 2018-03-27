@@ -1,4 +1,4 @@
-package com.dam.financialgame;
+package com.dam.financialgame.controllers;
 
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;

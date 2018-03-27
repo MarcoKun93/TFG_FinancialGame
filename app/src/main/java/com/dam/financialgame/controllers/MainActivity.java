@@ -1,4 +1,4 @@
-package com.dam.financialgame;
+package com.dam.financialgame.controllers;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -12,6 +12,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.view.Gravity;
 
+import com.dam.financialgame.R;
 import com.dam.financialgame.services.AlmacenJuegoImpl;
 
 import java.util.Vector;

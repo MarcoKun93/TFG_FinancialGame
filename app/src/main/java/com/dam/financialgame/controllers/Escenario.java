@@ -51,7 +51,7 @@ public class Escenario extends AppCompatActivity {
     // Numero de rondas del fin del juego
     int numRondasFinJuego = 0;
     // Numero de eventos que tiene una ronda
-    public final int eventosPorRonda = 4;
+    public final int EVENTOS_POR_RONDA = 2;
 
     // Vector de indices de cartas procedentes del mazo
     Vector<Integer> indicesCartasDelMazo = new Vector<Integer>();
@@ -140,11 +140,11 @@ public class Escenario extends AppCompatActivity {
                 // Paramos animación
                 botonIniciar.startAnimation(stop);
 
-                // Aumentamos en 1 el número de eventos, si es múltiplo de eventosPorRondas quiere decir que se ejecuta la actividad de guardar info de cada jugador
+                // Aumentamos en 1 el número de eventos, si es múltiplo de EVENTOS_POR_RONDAs quiere decir que se ejecuta la actividad de guardar info de cada jugador
                 eventos ++;
 
-                // Calculamos el numero de rondas que llevamos, es la división entre eventosPorRonda
-                if (eventos%eventosPorRonda==0)
+                // Calculamos el numero de rondas que llevamos, es la división entre EVENTOS_POR_RONDA
+                if (eventos%EVENTOS_POR_RONDA==0)
                     numRondasActuales++;
                 numRondas.setText("Número de ronda: "+Integer.toString(numRondasActuales+1)+"/"+Integer.toString(numRondasFinJuego));
 

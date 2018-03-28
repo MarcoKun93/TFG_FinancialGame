@@ -9,20 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.dam.financialgame.MainActivity" />
-        android:screenOrientation="portrait"
-        <activity android:name="com.dam.financialgame.Escenario" />
-        <activity android:name="com.dam.financialgame.IntroducirDatos" />
-        <activity android:name="com.dam.financialgame.SplashScreenActivity">
+        <activity android:name="com.dam.financialgame.controllers.MainActivity" />
+        <activity android:name="com.dam.financialgame.controllers.Escenario" />
+        <activity android:name="com.dam.financialgame.controllers.IntroducirDatos" />
+        <activity android:name="com.dam.financialgame.controllers.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.dam.financialgame.GraficasJugadores" />
-        <activity android:name="com.dam.financialgame.LineGraph" />
-        <activity android:name="com.dam.financialgame.PieGraph"></activity>
+        <activity android:name="com.dam.financialgame.controllers.GraficasJugadores" />
+        <activity android:name="com.dam.financialgame.controllers.LineGraph" />
+        <activity android:name="com.dam.financialgame.controllers.PieGraph"></activity>
     </application>
 
 </manifest>

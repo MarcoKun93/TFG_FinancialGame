@@ -29,7 +29,7 @@ public class Evento extends DialogFragment{
     int rondaActual;
     ImageButton botonCerrarVentana;
     // Numero de eventos que tiene una ronda
-    public final int eventosPorRonda = 4;
+    public final int EVENTOS_POR_RONDA = 2;
 
     // Recibe como parámetro el vector con la información de la carta evento, y el numero de eventos por si cuando se destruya ese dialog hay que lanzar la actividad de instroducir datos
     static Evento newInstance(Vector<String> result, int eventos, int rondaActual) {
@@ -132,7 +132,7 @@ public class Evento extends DialogFragment{
     // Si el dialogFragment es destruido, vemos si hay que lanzar la actividad de introducir datos
     @Override
     public void onDestroy() {
-        if (eventos%eventosPorRonda == 0){    // Si el resto es cero, cuando el fragment es destruido lanzamos la actividad de introducir datos
+        if (eventos%EVENTOS_POR_RONDA == 0){    // Si el resto es cero, cuando el fragment es destruido lanzamos la actividad de introducir datos
             Intent intent = new Intent(getActivity(), IntroducirDatos.class);
             intent.putExtra("rondaActual", rondaActual);
             startActivityForResult(intent, 0);

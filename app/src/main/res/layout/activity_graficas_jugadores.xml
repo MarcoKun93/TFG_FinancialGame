@@ -6,21 +6,63 @@
     android:orientation="vertical"
     android:weightSum="1">
 
-        <fragment
-            android:id="@+id/lineGraphFragment"
-            android:name="com.dam.financialgame.LineGraph"
+        <TabHost
+            android:id="@+id/graficasTabHost"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            tools:layout="@layout/fragment_line_graph" />
+            android:layout_height="454dp">
 
-        <fragment
-            android:id="@+id/fragment2"
-            android:name="com.dam.financialgame.PieGraph"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            tools:layout="@layout/fragment_pie_graph" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:orientation="horizontal" />
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="382dp">
+
+                                <LinearLayout
+                                    android:id="@+id/lineTab"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                        <fragment
+                                            android:id="@+id/lineGraphFragment"
+                                            android:name="com.dam.financialgame.controllers.LineGraph"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="10dp"
+                                            tools:layout="@layout/fragment_line_graph" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/pieTab"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                        <fragment
+                                            android:id="@+id/pieGraphFragment"
+                                            android:name="com.dam.financialgame.controllers.PieGraph"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="10dp"
+                                            tools:layout="@layout/fragment_pie_graph" />
+                                </LinearLayout>
+
+                        </FrameLayout>
+                </LinearLayout>
+        </TabHost>
 
         <Button
             android:id="@+id/salirDeLasGraficas"

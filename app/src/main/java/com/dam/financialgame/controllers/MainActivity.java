@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner rondas;
     Spinner jugadoresRegistrados;
     int numRondas = 0;
-    static int numJugadoresMaximo = 6;
+    static int NUM_JUGADORES_MAX = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         jugadoresRegistrados = (Spinner) findViewById(R.id.JugadoresRegistrados);
 
         // Ponemos las rondas totales disponible, y un listener para guardar el dato. Una ronda está compuesto por 5 eventos
-        String[] rondasDisponibles = {"1","3","5","8"};
+        String[] rondasDisponibles = {"1","2","5","8"};
         rondas.setAdapter(new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, rondasDisponibles));
         rondas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void añadirJugador(View view) {
         // Primero comprobamos que no se ha superado el numero maximo de jugadores y que el nombre introducido no sea vacío
-        if ((almacen.getInfoJugadores().size() < numJugadoresMaximo) && (!nombreJugador.getText().toString().equals(""))) {
+        if ((almacen.getInfoJugadores().size() < NUM_JUGADORES_MAX) && (!nombreJugador.getText().toString().equals(""))) {
             almacen.setInfoJugador(nombreJugador.getText().toString(), 0, 0, 0, 0, 0, 0, 0);
             Toast toast = Toast.makeText(getApplicationContext(), "Añadido jugador: " + nombreJugador.getText().toString(), Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER,0,0);  // Indicamos que aparezca la notificacion en el centro

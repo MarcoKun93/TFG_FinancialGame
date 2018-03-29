@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.dam.financialgame.R;
 import com.dam.financialgame.services.AlmacenJuegoImpl;
+import com.dam.financialgame.threads.TemporizadorThread;
 
 import java.util.Collections;
 import java.util.Vector;
@@ -34,10 +35,7 @@ public class Escenario extends AppCompatActivity {
     ArrayAdapter<String> adaptador; // Para guardar los jugadores y puntuaciones
     AlmacenJuegoImpl almacen = new AlmacenJuegoImpl(this);
     int eventos = 0;
-    // Objeto que reproducirá el audio
-    private MediaPlayer reproductorStart;
-    private MediaPlayer reproductorEnd;
-    private MediaPlayer reproductorTimeOut;
+
     // Definimos una variable long donde guarda los milisegundos del temporizador
     long segundos;
 
@@ -89,69 +87,16 @@ public class Escenario extends AppCompatActivity {
     public void iniciarTemporizador (View view) {
         // Bloqueamos el botón de iniciar
         botonIniciar.setEnabled(false);
-        final Animation efectoLento = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scaleinout_lento);
-        final Animation efectoNormal = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scaleinout_normal);
-        final Animation efectoRapido = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scaleinout_rapido);
-        final Animation stop = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.stop);
 
         // Calculamos de forma aleatoria el valor entre intervalo, comprendido entre 20 y 50 segundos 30)+21
         segundosIntervalo = (int) (Math.random() * 30)+21;
 
-        // Cambiamos la imagend el botón por la del dolar y la empezamos a animar
-        botonIniciar.setImageResource(R.drawable.dolar1);
-        botonIniciar.startAnimation(efectoLento);
+        // Ponemos a invisible el boton, para dejar paso a la barra de progreso
+        botonIniciar.setVisibility(View.INVISIBLE);
 
-        // Le pasamos al reproductor el audio que queremos que reproduzca
-        reproductorStart = MediaPlayer.create(this, R.raw.start_ring);
-        reproductorEnd = MediaPlayer.create(this, R.raw.end_turn);
-        reproductorTimeOut = MediaPlayer.create(this, R.raw.time_running_out);
-        reproductorTimeOut.setLooping(true);    //Indico que quiero que el audio se reproduzca en bucle
-
-        reproductorStart.start();
-
-        // Instanciamos el temporizador
-        new CountDownTimer(segundosIntervalo * 1000, 1000) {
-
-            // El método onTick es secuencial, no se ejecuta hasta que el anteior onTick se haya resuelt (cuidado al poner bucles!!)
-            public void onTick(long millisUntilFinished) {
-                segundos = millisUntilFinished / 1000;
-                Log.d(TAG, "iniciarTemporizador() valor "+segundos); // Para depurar
-                // Dependiendo del porcentaje que lleve de tiempo pasado, ejecuto en bucle una animación u otra
-                if(segundos < (0.5*segundosIntervalo) && noSegundo){
-                    botonIniciar.startAnimation(efectoNormal);
-                    noSegundo = false;
-                } else if(segundos < (0.2*segundosIntervalo) && noTercero){
-                    botonIniciar.startAnimation(efectoRapido);
-                    noTercero = false;
-                    reproductorTimeOut.start();
-                }
-            }
-
-            public void onFinish() {
-                botonIniciar.setEnabled(true);
-                noSegundo = true;
-                noTercero = true;
-
-                // Ejecutar algun sonido o algo para avisar
-                reproductorTimeOut.stop();
-                reproductorTimeOut.release();
-                reproductorEnd.start();
-
-                // Paramos animación
-                botonIniciar.startAnimation(stop);
-
-                // Aumentamos en 1 el número de eventos, si es múltiplo de EVENTOS_POR_RONDAs quiere decir que se ejecuta la actividad de guardar info de cada jugador
-                eventos ++;
-
-                // Calculamos el numero de rondas que llevamos, es la división entre EVENTOS_POR_RONDA
-                if (eventos%EVENTOS_POR_RONDA==0)
-                    numRondasActuales++;
-                numRondas.setText("Número de ronda: "+Integer.toString(numRondasActuales+1)+"/"+Integer.toString(numRondasFinJuego));
-
-                // Lanzamos el fragmentDialog con el id de la carta del mazo elegida
-                showDialog();
-            }
-        }.start();
+        // Instanciamos y llamamos al hilo encargado del temporizador, pasandole la actividad padre que le llama
+        TemporizadorThread temporizadorThread = new TemporizadorThread(this);
+        temporizadorThread.execute(segundosIntervalo);
     }
 
     // Cuando la actividad se va a eliminar, vacío la tabla de jugadores
@@ -256,4 +201,19 @@ public class Escenario extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
+    // Metodo llamado desde el hilo temporizador cuando se vaya a cerrar hilo
+    public void finalizarTemporizador() {
+        botonIniciar.setEnabled(true);
+        botonIniciar.setVisibility(View.VISIBLE);
+        // Aumentamos en 1 el número de eventos, si es múltiplo de EVENTOS_POR_RONDAs quiere decir que se ejecuta la actividad de guardar info de cada jugador
+        eventos ++;
+
+        // Calculamos el numero de rondas que llevamos, es la división entre EVENTOS_POR_RONDA
+        if (eventos%EVENTOS_POR_RONDA==0)
+            numRondasActuales++;
+        numRondas.setText("Número de ronda: "+Integer.toString(numRondasActuales+1)+"/"+Integer.toString(numRondasFinJuego));
+
+        // Lanzamos el fragmentDialog con el id de la carta del mazo elegida
+        showDialog();
+    }
 }

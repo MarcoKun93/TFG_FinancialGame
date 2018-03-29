@@ -11,7 +11,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.NumberPicker;
 import android.widget.Spinner;
+import android.widget.TabHost;
 
 import com.dam.financialgame.R;
 import com.dam.financialgame.services.AlmacenJuegoImpl;
@@ -21,11 +23,20 @@ import java.util.Vector;
 public class IntroducirDatos extends AppCompatActivity {
 
     // Declaramos los ditintos elementos del layout
-    Vector<EditText> variables = new Vector<EditText>();
+    Vector<NumberPicker> cantidades = new Vector<NumberPicker>();
+    EditText efectivo;
+    EditText financiacion;
+    Vector<EditText> valorAcciones = new Vector<EditText>();
+    EditText valorInmuebles;
     Spinner listadoJugadores;
     Vector<String> jugadoresParaActualizar = new Vector<String>();
+    TabHost introducirValoresTabHost;
 
-    // Declaramos la variable gestor del la base de datos
+    // Declaramos variables estaticas
+    static int VALOR_BONOS = 4000;
+    static int VALOR_PENSIONES = 5000;
+
+    // Declaramos la variable gestor de la base de datos
     AlmacenJuegoImpl almacen = new AlmacenJuegoImpl(this);
 
     // Declaramos un adaptador para guardar el vector que contiene los jugadores
@@ -35,7 +46,7 @@ public class IntroducirDatos extends AppCompatActivity {
     String jugadorActual;
 
     // Para depuración
-    private static final String TAG = Escenario.class.getSimpleName();  // Para depurar
+    private static final String TAG = IntroducirDatos.class.getSimpleName();  // Para depurar
 
     // Declaramos una variable que guarde el modo del alertFragment
     int modoAlert;
@@ -55,12 +66,40 @@ public class IntroducirDatos extends AppCompatActivity {
     public void iniciarIntroducirDatos() {
         rondaActual = getIntent().getIntExtra("rondaActual", rondaActual);
 
-        variables.add((EditText) findViewById(R.id.variable1));
-        variables.add((EditText) findViewById(R.id.variable2));
-        variables.add((EditText) findViewById(R.id.variable3));
-        variables.add((EditText) findViewById(R.id.variable4));
-        variables.add((EditText) findViewById(R.id.variable5));
-        variables.add((EditText) findViewById(R.id.variable6));
+        // Activamos el tabHost de introducir valores
+        introducirValoresTabHost = (TabHost) findViewById(R.id.introducirValoresTabHost);
+        introducirValoresTabHost.setup();
+        TabHost.TabSpec tab1 = introducirValoresTabHost.newTabSpec("tab1");  //aspectos de cada Tab (pestaña)
+        TabHost.TabSpec tab2 = introducirValoresTabHost.newTabSpec("tab2");
+        tab1.setIndicator("VALORES");    //qué queremos que aparezca en las pestañas
+        tab1.setContent(R.id.introducirValoresTab); //definimos el id de cada Tab (pestaña)
+        tab2.setIndicator("CANTIDADES POR JUGADOR");
+        tab2.setContent(R.id.indicarCantidadesTab);
+        introducirValoresTabHost.addTab(tab1); //añadimos los tabs ya programados
+        introducirValoresTabHost.addTab(tab2);
+
+        efectivo = (EditText) findViewById(R.id.variable5);
+        financiacion = (EditText) findViewById(R.id.variable6);
+
+        cantidades.add((NumberPicker) findViewById(R.id.variable1_1));
+        cantidades.add((NumberPicker) findViewById(R.id.variable1_2));
+        cantidades.add((NumberPicker) findViewById(R.id.variable1_3));
+        cantidades.add((NumberPicker) findViewById(R.id.variable2));
+        cantidades.add((NumberPicker) findViewById(R.id.variable3));
+        cantidades.add((NumberPicker) findViewById(R.id.variable4));
+
+        for (int i = 0; i<cantidades.size(); i++) {
+            cantidades.get(i).setMinValue(0);
+            cantidades.get(i).setMaxValue(20);
+            cantidades.get(i).setWrapSelectorWheel(false);
+        }
+
+        valorAcciones.add((EditText) findViewById(R.id.valorAccionesEuropeas));
+        valorAcciones.add((EditText) findViewById(R.id.valorAccionesAmericanas));
+        valorAcciones.add((EditText) findViewById(R.id.valorAccionesAsiaticas));
+
+        valorInmuebles = (EditText) findViewById(R.id.valorInmuebles);
+
         listadoJugadores = (Spinner) findViewById(R.id.listadoJugadores);
         jugadoresParaActualizar = almacen.getJugadores();
 
@@ -150,14 +189,31 @@ public class IntroducirDatos extends AppCompatActivity {
 
         if (modoAlert == 1){
             // Comprobamos que las variables, si no hay nada escrito, el valor por defecto sea 0
-            for (int i = 0; i < variables.size(); i++){
-                if (variables.get(i).getText() == null || variables.get(i).getText().toString().equals("")) {
-                    variables.get(i).setText("0");
+            for (int i = 0; i < valorAcciones.size(); i++){
+                if (valorAcciones.get(i).getText() == null || valorAcciones.get(i).getText().toString().equals("")) {
+                    valorAcciones.get(i).setText("0");
                 }
             }
+            if (valorInmuebles.getText() == null || valorInmuebles.getText().toString().equals("")) {
+                valorInmuebles.setText("0");
+            }
+            if (efectivo.getText() == null || efectivo.getText().toString().equals("")) {
+                efectivo.setText("0");
+            }
+            if (financiacion.getText() == null || financiacion.getText().toString().equals("")) {
+                financiacion.setText("0");
+            }
+
 
             // Introducimos los valores del jugador correspondiente
-            almacen.setInfoJugador(jugadorActual, rondaActual, Integer.parseInt(variables.get(0).getText().toString()), Integer.parseInt(variables.get(1).getText().toString()), Integer.parseInt(variables.get(2).getText().toString()), Integer.parseInt(variables.get(3).getText().toString()), Integer.parseInt(variables.get(4).getText().toString()), Integer.parseInt(variables.get(5).getText().toString()));
+            almacen.setInfoJugador(jugadorActual, rondaActual, Integer.parseInt(valorAcciones.get(0).getText().toString()) * cantidades.get(0).getValue() +
+                                                                            Integer.parseInt(valorAcciones.get(1).getText().toString()) * cantidades.get(1).getValue() +
+                                                                                Integer.parseInt(valorAcciones.get(2).getText().toString()) * cantidades.get(2).getValue(),
+                                                               Integer.parseInt(valorInmuebles.getText().toString()) * cantidades.get(3).getValue(),
+                                                               VALOR_BONOS * cantidades.get(4).getValue(),
+                                                               VALOR_PENSIONES * cantidades.get(5).getValue(),
+                                                               Integer.parseInt(efectivo.getText().toString()),
+                                                               Integer.parseInt(financiacion.getText().toString()));
 
             // Eliminamos del vector de jugadores para actualizar, el que tenga el mismo nombre del que hemos actualizados
             for (int i = 0; i < jugadoresParaActualizar.size(); i++){   //DEBEMOS QUITARLO DE LA LISTA!!!
@@ -185,9 +241,9 @@ public class IntroducirDatos extends AppCompatActivity {
             }
 
             // Vaciamos los edit text para el siguiente jugador
-            for (int i = 0; i < variables.size(); i++){
-                variables.get(i).setText("");
-            }
+            efectivo.setText("0");
+            financiacion.setText("0");
+
         } else if(modoAlert == 2){
             finish();
         }

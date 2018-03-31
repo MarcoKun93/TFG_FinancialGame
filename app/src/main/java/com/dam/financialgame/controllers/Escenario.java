@@ -91,9 +91,6 @@ public class Escenario extends AppCompatActivity {
         // Calculamos de forma aleatoria el valor entre intervalo, comprendido entre 20 y 50 segundos 30)+21
         segundosIntervalo = (int) (Math.random() * 30)+21;
 
-        // Ponemos a invisible el boton, para dejar paso a la barra de progreso
-        botonIniciar.setVisibility(View.INVISIBLE);
-
         // Instanciamos y llamamos al hilo encargado del temporizador, pasandole la actividad padre que le llama
         TemporizadorThread temporizadorThread = new TemporizadorThread(this);
         temporizadorThread.execute(segundosIntervalo);
@@ -118,9 +115,6 @@ public class Escenario extends AppCompatActivity {
             // Muestro fragment final del juego, en ese fragment se muestra quien ha ganado
             showFinDelJuego();
         }
-
-        // Cambiamos la imagen del dolar por la de start, así indicamos que deben de pulsar otra vez para comenzar la ronda
-        botonIniciar.setImageResource(R.drawable.botonstartv2);
     }
 
     public void actualizarRanking () {
@@ -204,7 +198,6 @@ public class Escenario extends AppCompatActivity {
     // Metodo llamado desde el hilo temporizador cuando se vaya a cerrar hilo
     public void finalizarTemporizador() {
         botonIniciar.setEnabled(true);
-        botonIniciar.setVisibility(View.VISIBLE);
         // Aumentamos en 1 el número de eventos, si es múltiplo de EVENTOS_POR_RONDAs quiere decir que se ejecuta la actividad de guardar info de cada jugador
         eventos ++;
 

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_verde"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="208dp"
+        android:layout_marginBottom="132dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icono_principal" />
+
+    <ImageButton
+        android:id="@+id/iniciarSesion"
+        android:layout_width="47dp"
+        android:layout_height="40dp"
+        android:background="@android:drawable/ic_menu_myplaces"
+        android:onClick="irIniciarSesion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="153dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="115dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonIniciarPartida"
+                android:layout_width="153dp"
+                android:layout_height="65dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@android:color/background_light"
+                android:onClick="irIniciarPartida"
+                android:text="Inicar Partida"
+                android:typeface="serif"
+                app:layout_constraintBottom_toTopOf="@+id/buttonComunidad"
+                app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonComunidad"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginStart="0dp"
+                android:backgroundTint="@android:color/background_light"
+                android:onClick="irComunidad"
+                android:text="Comunidad"
+                android:typeface="serif"
+                app:layout_constraintBottom_toTopOf="@+id/buttonInstrucciones"
+                app:layout_constraintStart_toStartOf="@+id/buttonIniciarPartida"
+                app:layout_constraintTop_toBottomOf="@+id/buttonIniciarPartida" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="11dp">
+
+            <Button
+                android:id="@+id/buttonInstrucciones"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@android:color/background_light"
+                android:onClick="irInstrucciones"
+                android:text="Ver Instrucciones"
+                android:typeface="serif"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonComunidad" />
+        </TableRow>
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

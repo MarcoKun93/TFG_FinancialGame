@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_blanco">
 
     <TabHost
         android:id="@+id/introducirValoresTabHost"
@@ -50,11 +51,12 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
-                                android:fontFamily="casual"
+                                android:fontFamily="serif"
                                 android:text="Indique los datos para todos los jugadores:"
                                 android:textColor="@android:color/black"
                                 android:textSize="18sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                android:typeface="serif" />
 
                             <Spinner
                                 android:id="@+id/listadoJugadores"
@@ -77,10 +79,12 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="serif"
                                         android:text="Acciones Europeas:"
                                         android:textColor="@android:color/black"
                                         android:textSize="18sp"
-                                        android:textStyle="bold" />
+                                        android:textStyle="bold"
+                                        android:typeface="serif" />
 
                                     <NumberPicker
                                         android:id="@+id/variable1-1"
@@ -99,10 +103,12 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="serif"
                                         android:text="Acciones Americanas:"
                                         android:textColor="@android:color/black"
                                         android:textSize="18sp"
-                                        android:textStyle="bold" />
+                                        android:textStyle="bold"
+                                        android:typeface="serif" />
 
                                     <NumberPicker
                                         android:id="@+id/variable1-2"
@@ -121,10 +127,12 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="serif"
                                         android:text="Acciones Asiaticas:"
                                         android:textColor="@android:color/black"
                                         android:textSize="18sp"
-                                        android:textStyle="bold" />
+                                        android:textStyle="bold"
+                                        android:typeface="serif" />
 
                                     <NumberPicker
                                         android:id="@+id/variable1-3"
@@ -143,10 +151,12 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="serif"
                                         android:text="Bienes Inmuebles:"
                                         android:textColor="@android:color/black"
                                         android:textSize="18sp"
-                                        android:textStyle="bold" />
+                                        android:textStyle="bold"
+                                        android:typeface="serif" />
 
                                     <NumberPicker
                                         android:id="@+id/variable2"
@@ -165,10 +175,12 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="serif"
                                         android:text="Bonos del Estado:"
                                         android:textColor="@android:color/black"
                                         android:textSize="18sp"
-                                        android:textStyle="bold" />
+                                        android:textStyle="bold"
+                                        android:typeface="serif" />
 
                                     <NumberPicker
                                         android:id="@+id/variable3"
@@ -187,10 +199,12 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="serif"
                                         android:text="Plan de Pensiones:"
                                         android:textColor="@android:color/black"
                                         android:textSize="18sp"
-                                        android:textStyle="bold" />
+                                        android:textStyle="bold"
+                                        android:typeface="serif" />
 
                                     <NumberPicker
                                         android:id="@+id/variable4"
@@ -209,10 +223,12 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="serif"
                                         android:text="Efectivo:"
                                         android:textColor="@android:color/black"
                                         android:textSize="18sp"
-                                        android:textStyle="bold" />
+                                        android:textStyle="bold"
+                                        android:typeface="serif" />
 
                                     <EditText
                                         android:id="@+id/variable5"
@@ -232,10 +248,12 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="serif"
                                         android:text="Financiación:"
                                         android:textColor="@android:color/black"
                                         android:textSize="18sp"
-                                        android:textStyle="bold" />
+                                        android:textStyle="bold"
+                                        android:typeface="serif" />
 
                                     <EditText
                                         android:id="@+id/variable6"

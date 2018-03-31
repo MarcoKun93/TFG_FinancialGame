@@ -31,14 +31,15 @@
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:fontFamily="casual"
+                    android:fontFamily="serif"
                     android:gravity="center"
                     android:text="Aquí se mostrará el nombre de la carta"
                     android:textAlignment="viewStart"
                     android:textAllCaps="true"
                     android:textColor="@android:color/black"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:typeface="serif" />
 
                 <ImageButton
                     android:id="@+id/botonCerrarVentana"
@@ -63,12 +64,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:fontFamily="casual"
+                android:fontFamily="serif"
                 android:text="Aquí se mostrará el tipo de carta"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@android:color/background_dark"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:typeface="serif" />
 
             <TextView
                 android:id="@+id/atributo1"

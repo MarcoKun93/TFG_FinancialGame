@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.dam.financialgame.controllers.MainActivity" />
+        <activity android:name="com.dam.financialgame.controllers.MenuDeInicio" />
+        <activity android:name="com.dam.financialgame.controllers.Comunidad" />
         <activity android:name="com.dam.financialgame.controllers.Escenario" />
         <activity android:name="com.dam.financialgame.controllers.IntroducirDatos" />
         <activity android:name="com.dam.financialgame.controllers.SplashScreenActivity">

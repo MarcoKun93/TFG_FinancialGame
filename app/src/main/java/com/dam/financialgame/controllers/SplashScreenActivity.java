@@ -19,9 +19,6 @@ public class SplashScreenActivity extends AppCompatActivity {
     // Duración del Splash Screen
     private static final long SPLASH_SCREEN_DELAY = 3000;
 
-    // Declaramos la iomagen que va a hacer animacion de giro
-    ImageView imagen;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,18 +29,12 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash_screen);
 
-        imagen = (ImageView) findViewById(R.id.logoInicio);
-
-        final Animation efectoGiro = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.girar);
-
-        imagen.startAnimation(efectoGiro);
-
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
 
                 // Start the next activity
-                Intent mainIntent = new Intent().setClass(SplashScreenActivity.this, MainActivity.class);
+                Intent mainIntent = new Intent().setClass(SplashScreenActivity.this, MenuDeInicio.class);
                 startActivity(mainIntent);
 
                 // Close the activity so the user won't able to go back this

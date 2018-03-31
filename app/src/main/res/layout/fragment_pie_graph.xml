@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:fontFamily="casual"
+        android:fontFamily="serif"
         android:text="Distribución del resultado final"
         android:textAlignment="center"
         android:textAllCaps="true"

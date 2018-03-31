@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo_blanco"
     android:orientation="vertical"
     android:weightSum="1">
 
@@ -72,6 +73,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:onClick="salirDeLasGraficas"
-            android:text="Salir" />
+            android:text="Salir"
+            android:typeface="serif" />
 
 </LinearLayout>

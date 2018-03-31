@@ -13,7 +13,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="casual"
+            android:fontFamily="serif"
             android:text="Progreso de los jugadores:"
             android:textAlignment="center"
             android:textAllCaps="true"

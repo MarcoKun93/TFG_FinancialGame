@@ -25,10 +25,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_weight="1"
-            android:fontFamily="casual"
+            android:fontFamily="serif"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:typeface="serif" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -44,8 +45,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:fontFamily="serif"
                 android:onClick="doPositiveClick"
-                android:text="Confirmar" />
+                android:text="Confirmar"
+                android:typeface="serif" />
 
             <Button
                 android:id="@+id/cancelar"
@@ -53,8 +56,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:fontFamily="serif"
                 android:onClick="doNegativeClick"
-                android:text="Cancelar" />
+                android:text="Cancelar"
+                android:typeface="serif" />
         </LinearLayout>
     </LinearLayout>
 

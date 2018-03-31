@@ -24,11 +24,12 @@
             android:layout_gravity="center"
             android:layout_margin="15dp"
             android:layout_weight="0.01"
-            android:fontFamily="casual"
+            android:fontFamily="serif"
             android:text="Ha ganado el jugador:"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:typeface="serif" />
 
         <TextView
             android:id="@+id/nombreGanador"
@@ -37,12 +38,13 @@
             android:layout_gravity="center"
             android:layout_margin="15dp"
             android:layout_weight="0.09"
-            android:fontFamily="casual"
+            android:fontFamily="serif"
             android:gravity="center"
             android:text="Nombre"
             android:textColor="@android:color/black"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:typeface="serif" />
 
         <Button
             android:id="@+id/botonVerGraficas"
@@ -50,6 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
             android:layout_weight="0.00"
+            android:fontFamily="serif"
             android:onClick="verGraficas"
             android:text="Ver gráficas" />
     </LinearLayout>

@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
            Intent intent = new Intent(view.getContext(), Escenario.class);
            intent.putExtra("numRondas", numRondas);
            startActivityForResult(intent, 0);
+           finish();
        } else {
            Toast toast = Toast.makeText(getApplicationContext(), "No hay jugadores registrados", Toast.LENGTH_LONG);
            toast.setGravity(Gravity.CENTER,0,0);  // Indicamos que aparezca la notificacion en el centro

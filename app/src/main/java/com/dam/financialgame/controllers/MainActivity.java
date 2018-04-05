@@ -13,7 +13,7 @@ import android.widget.Toast;
 import android.view.Gravity;
 
 import com.dam.financialgame.R;
-import com.dam.financialgame.services.AlmacenJuegoImpl;
+import com.dam.financialgame.servicesImpl.AlmacenJuegoImpl;
 
 import java.util.Vector;
 

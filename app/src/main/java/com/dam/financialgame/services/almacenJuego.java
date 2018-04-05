@@ -1,4 +1,4 @@
-package com.dam.financialgame.iservices;
+package com.dam.financialgame.services;
 
 import java.util.Vector;
 

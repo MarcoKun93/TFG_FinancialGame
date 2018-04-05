@@ -16,7 +16,7 @@ import android.widget.Spinner;
 import android.widget.TabHost;
 
 import com.dam.financialgame.R;
-import com.dam.financialgame.services.AlmacenJuegoImpl;
+import com.dam.financialgame.servicesImpl.AlmacenJuegoImpl;
 
 import java.util.Vector;
 

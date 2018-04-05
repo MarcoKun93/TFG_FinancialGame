@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.dam.financialgame.R;
-import com.dam.financialgame.services.AlmacenJuegoImpl;
+import com.dam.financialgame.servicesImpl.AlmacenJuegoImpl;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;

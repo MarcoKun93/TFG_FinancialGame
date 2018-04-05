@@ -12,7 +12,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.dam.financialgame.R;
-import com.dam.financialgame.services.AlmacenJuegoImpl;
+import com.dam.financialgame.servicesImpl.AlmacenJuegoImpl;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;

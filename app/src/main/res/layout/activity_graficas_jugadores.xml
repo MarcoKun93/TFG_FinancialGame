@@ -66,14 +66,29 @@
                 </LinearLayout>
         </TabHost>
 
-        <Button
-            android:id="@+id/salirDeLasGraficas"
-            android:layout_width="109dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:onClick="salirDeLasGraficas"
-            android:text="Salir"
-            android:typeface="serif" />
+            android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/salirDeLasGraficas"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:onClick="salirDeLasGraficas"
+                    android:text="Salir"
+                    android:typeface="serif" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    android:text="Subir Partida" />
+        </LinearLayout>
 
 </LinearLayout>

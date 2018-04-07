@@ -303,4 +303,34 @@ public class AlmacenJuegoImpl extends SQLiteOpenHelper implements almacenJuego {
 
         return  nombreGanadorPuntuacion;
     }
+
+    public int getPuntuacionJugadorGanador() {
+        int puntuacion = 0;
+
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT Max(puntuacion) FROM jugadores", null);
+        while (cursor.moveToNext()) {
+            // El int enviado obtinene puntuacion del jugador ganador
+            puntuacion = cursor.getInt(0);
+        }
+        cursor.close();
+        db.close();
+
+        return puntuacion;
+    }
+
+    public String getNombreJugadorGanador() {
+        String nombreGanadorPuntuacion = "";
+
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT nombre, Max(puntuacion) FROM jugadores", null);
+        while (cursor.moveToNext()){
+            // El string enviado obtinene el nombre del jugador ganador y su puntuación
+            nombreGanadorPuntuacion = cursor.getString(0);
+        }
+        cursor.close();
+        db.close();
+
+        return  nombreGanadorPuntuacion;
+    }
 }

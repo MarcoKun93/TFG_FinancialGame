@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.TabHost;
 
 import com.dam.financialgame.R;
+import com.dam.financialgame.servicesImpl.AlmacenJuegoImpl;
+import com.dam.financialgame.servicesImpl.PartidaServiceImpl;
 
 // Esta clase administrará los fragments correspondientes a las distintas gráficas que esterán embebidos en esta clase
 public class GraficasJugadores extends AppCompatActivity {
@@ -24,7 +26,6 @@ public class GraficasJugadores extends AppCompatActivity {
         setContentView(R.layout.activity_graficas_jugadores);
         botonSalir = (Button) findViewById(R.id.salirDeLasGraficas);
         graficasTabHost = (TabHost) findViewById(R.id.graficasTabHost);
-
 
         // Obtenemos el número de rondas totales
         numRondasFinJuego = getIntent().getIntExtra("numRondasFinJuego", numRondasFinJuego);
@@ -56,6 +57,12 @@ public class GraficasJugadores extends AppCompatActivity {
     // Para obtener el numero de rondas totales de la partida desde los fragments
     public static int obtenerNumRondasFinJuego () {
         return numRondasFinJuego;
+    }
+
+    // Método llamado desde un botón para enviar al servidor info partida al servidor, en este caso información del jugador ganador.
+    public void postPartidaDesdeGraficas(View view) {
+        AlmacenJuegoImpl almacenJuego = new AlmacenJuegoImpl(this);
+        PartidaServiceImpl.getInstance().subirPartidas(Integer.toString(almacenJuego.getPuntuacionJugadorGanador()), almacenJuego.getNombreJugadorGanador(), this);
     }
 
     public void salirDeLasGraficas (View view) {

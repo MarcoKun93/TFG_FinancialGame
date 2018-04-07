@@ -13,4 +13,6 @@ public interface almacenJuego {
     public Vector<String> obtenerCartaDelMazo(int indice);   // Obtengo una carta del mazo, recibe el indice de la carta deseada
     public String getJugadorGanador();  // Obtengo el nombre del jugador ganador
     public Vector<Integer> getIndicesCartas();  // Obtengo el indice de las cartas del mazo barajado
+    public int getPuntuacionJugadorGanador();
+    public String getNombreJugadorGanador();
 }

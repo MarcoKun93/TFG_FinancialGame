@@ -1,7 +1,10 @@
 package com.dam.financialgame.servicesImpl;
 
+import android.app.Activity;
 import android.app.Application;
 import android.util.Log;
+import android.view.Gravity;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -29,8 +32,6 @@ public class PartidaServiceImpl implements PartidaService {
     private static PartidaServiceImpl partidaService;
     final String URL_PARTIDAS_SUBIDAS = "https://tfgserviceses.000webhostapp.com/tablaprueba/lista.php";
     final String URL_SUBIR_PARTIDAS = "https://tfgserviceses.000webhostapp.com/tablaprueba/nueva.php";
-    // http://httpbin.org/get?param=hello
-    // https://tfgserviceses.000webhostapp.com/tablaprueba/lista.php
 
     public synchronized static PartidaServiceImpl getInstance() {
         if (partidaService == null) {
@@ -91,7 +92,7 @@ public class PartidaServiceImpl implements PartidaService {
     }
 
     // Una petición POST
-    public void subirPartidas(final String puntuacion, final String nombre) {
+    public void subirPartidas(final String puntuacion, final String nombre, final Activity activity) {
         final Date date = new Date();
         final DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
         final String fecha = dateFormat.format(date);
@@ -102,6 +103,9 @@ public class PartidaServiceImpl implements PartidaService {
                     public void onResponse(String response) {
                         // Response
                         Log.d("Response: ", response);
+                        Toast toast = Toast.makeText(activity.getApplicationContext(), "Información subida", Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER,0,0);  // Indicamos que aparezca la notificacion en el centro
+                        toast.show();
                     }
                 },
                 new Response.ErrorListener()

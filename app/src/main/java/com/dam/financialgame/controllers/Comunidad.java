@@ -36,7 +36,7 @@ public class Comunidad extends AppCompatActivity {
 
     // Método llamado desde un botón para enviar al servidor info partida al servidor.
     public void postPartida(View view) {
-        PartidaServiceImpl.getInstance().subirPartidas(puntuacion.getText().toString(), nombre.getText().toString());
+        PartidaServiceImpl.getInstance().subirPartidas(puntuacion.getText().toString(), nombre.getText().toString(), this);
     }
 
     // Método llamado desde un botón para recargar el ranking de la vista con la información almacenada en el servidor.

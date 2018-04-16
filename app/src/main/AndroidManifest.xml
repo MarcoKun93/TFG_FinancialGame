@@ -4,6 +4,7 @@
 
     <!-- Internet permission needed to call the API -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
 
     <application
         android:name=".threads.VolleyApplication"

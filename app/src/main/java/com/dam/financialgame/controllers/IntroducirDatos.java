@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.NumberPicker;
+import com.travijuu.numberpicker.library.NumberPicker;
 import android.widget.Spinner;
 import android.widget.TabHost;
 
@@ -89,9 +89,8 @@ public class IntroducirDatos extends AppCompatActivity {
         cantidades.add((NumberPicker) findViewById(R.id.variable4));
 
         for (int i = 0; i<cantidades.size(); i++) {
-            cantidades.get(i).setMinValue(0);
-            cantidades.get(i).setMaxValue(20);
-            cantidades.get(i).setWrapSelectorWheel(false);
+            cantidades.get(i).setMin(0);
+            cantidades.get(i).setMax(30);
         }
 
         valorAcciones.add((EditText) findViewById(R.id.valorAccionesEuropeas));
@@ -240,9 +239,13 @@ public class IntroducirDatos extends AppCompatActivity {
                 });
             }
 
-            // Vaciamos los edit text para el siguiente jugador
+            // Vaciamos los edit text para el siguiente jugador, también los NumberPicker los ponemos a cero
             efectivo.setText("0");
             financiacion.setText("0");
+            for(int i = 0; i < cantidades.size(); i++) {
+                cantidades.get(i).setValue(0);
+            }
+
 
         } else if(modoAlert == 2){
             finish();

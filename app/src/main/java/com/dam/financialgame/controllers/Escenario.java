@@ -84,7 +84,7 @@ public class Escenario extends AppCompatActivity {
         botonIniciar.setEnabled(false);
 
         // Calculamos de forma aleatoria el valor entre intervalo, comprendido entre 20 y 50 segundos 30)+21
-        segundosIntervalo = (int) (Math.random() * 30)+21;
+        segundosIntervalo = (int) (Math.random() * 10)+11;
 
         // Instanciamos y llamamos al hilo encargado del temporizador, pasandole la actividad padre que le llama
         TemporizadorThread temporizadorThread = new TemporizadorThread(this);

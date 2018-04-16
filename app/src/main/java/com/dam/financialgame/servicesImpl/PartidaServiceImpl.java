@@ -94,7 +94,7 @@ public class PartidaServiceImpl implements PartidaService {
     // Una petición POST
     public void subirPartidas(final String puntuacion, final String nombre, final Activity activity) {
         final Date date = new Date();
-        final DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
+        final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         final String fecha = dateFormat.format(date);
         StringRequest postRequest = new StringRequest(Request.Method.POST, URL_SUBIR_PARTIDAS,
                 new Response.Listener<String>()

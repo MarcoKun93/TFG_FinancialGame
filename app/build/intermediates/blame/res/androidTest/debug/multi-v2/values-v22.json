@@ -1,10 +1,26 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v22\\values-v22.xml",
+            "outputFile": "/home/marcos/StudioProjects/TFG_FinancialGame/F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\usuario\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\6fff3d000e289c9dcb66a0f2f4cef1fc\\res\\values-v22\\values-v22.xml",
+                    "source": "/home/marcos/StudioProjects/TFG_FinancialGame/C:\\Users\\usuario\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\6fff3d000e289c9dcb66a0f2f4cef1fc\\res\\values-v22\\values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,553",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,548,896"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/marcos/StudioProjects/TFG_FinancialGame/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v22/values-v22.xml",
+            "map": [
+                {
+                    "source": "/home/marcos/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/3c004992d2ea9188f859266d47027856/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

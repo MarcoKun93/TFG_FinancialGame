@@ -1,163 +1,163 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:2:1-28:12
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6fff3d000e289c9dcb66a0f2f4cef1fc\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7a590af11638f2514ba6a1ef1d4042dc\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\9a7243ab6eb2df8c3b6acb52cb857c9d\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\271908e3209fdea66c99dd1c8d147ec5\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b35dc1484a79430b4a13f84a13d83a4c\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\dcd4fac676271bdaaaa11ca1b4b4b194\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\f67148afaffeac28a75bc0485f312c9b\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\84d04e880b8b1c1017d17c1ec2200b5f\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\613021a63dd38cb4dc6e5609af6b6d70\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\bf80e76371b02dc09267dd88ed79b0c6\AndroidManifest.xml:17:1-31:12
-INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:2:1-28:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/3c004992d2ea9188f859266d47027856/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/marcos/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/f36c64fa10699f2afd9a7087216ef35c/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/9786407eec55d29c1653b523bf4781b2/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/2813464303163747c55534fc33aa751f/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/7501ffbc9221ccf199d9ddc1c559d342/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/3f12518a0560d53b6f5cbfce7e439b99/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/3b6ab04c8bfef00344e10a3ae653a7e1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/e6ee1ff6e71fa9bcf213db9d2d222694/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/082deebd8599c79bd0fcd53379efab9a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/6003d96fd9826927d6eb47688611a971/AndroidManifest.xml:17:1-31:12
+INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:2:1-28:12
 	package
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:3:5-36
-		INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
-		INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:3:5-36
+		INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:2:1-28:12
-		INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
+		INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:2:1-28:12
+		INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:2:1-28:12
-		INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
+		INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:2:1-28:12
+		INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:5:5-26:19
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6fff3d000e289c9dcb66a0f2f4cef1fc\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6fff3d000e289c9dcb66a0f2f4cef1fc\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7a590af11638f2514ba6a1ef1d4042dc\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7a590af11638f2514ba6a1ef1d4042dc\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\9a7243ab6eb2df8c3b6acb52cb857c9d\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\9a7243ab6eb2df8c3b6acb52cb857c9d\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\271908e3209fdea66c99dd1c8d147ec5\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\271908e3209fdea66c99dd1c8d147ec5\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b35dc1484a79430b4a13f84a13d83a4c\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b35dc1484a79430b4a13f84a13d83a4c\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\dcd4fac676271bdaaaa11ca1b4b4b194\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\dcd4fac676271bdaaaa11ca1b4b4b194\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\f67148afaffeac28a75bc0485f312c9b\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\f67148afaffeac28a75bc0485f312c9b\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\84d04e880b8b1c1017d17c1ec2200b5f\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\84d04e880b8b1c1017d17c1ec2200b5f\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\613021a63dd38cb4dc6e5609af6b6d70\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\613021a63dd38cb4dc6e5609af6b6d70\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\bf80e76371b02dc09267dd88ed79b0c6\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\bf80e76371b02dc09267dd88ed79b0c6\AndroidManifest.xml:29:5-20
+ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:5:5-26:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/3c004992d2ea9188f859266d47027856/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/3c004992d2ea9188f859266d47027856/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/marcos/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/f36c64fa10699f2afd9a7087216ef35c/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/marcos/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/f36c64fa10699f2afd9a7087216ef35c/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/9786407eec55d29c1653b523bf4781b2/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/9786407eec55d29c1653b523bf4781b2/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/2813464303163747c55534fc33aa751f/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/2813464303163747c55534fc33aa751f/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/7501ffbc9221ccf199d9ddc1c559d342/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/7501ffbc9221ccf199d9ddc1c559d342/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/3f12518a0560d53b6f5cbfce7e439b99/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/3f12518a0560d53b6f5cbfce7e439b99/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/3b6ab04c8bfef00344e10a3ae653a7e1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/3b6ab04c8bfef00344e10a3ae653a7e1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/e6ee1ff6e71fa9bcf213db9d2d222694/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/e6ee1ff6e71fa9bcf213db9d2d222694/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/082deebd8599c79bd0fcd53379efab9a/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/082deebd8599c79bd0fcd53379efab9a/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/6003d96fd9826927d6eb47688611a971/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/6003d96fd9826927d6eb47688611a971/AndroidManifest.xml:29:5-20
 	android:supportsRtl
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:11:9-40
 activity#com.dam.financialgame.MainActivity
-ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:12:9-71
+ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:12:9-71
 	android:name
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:12:19-68
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:12:19-68
 activity#com.dam.financialgame.Escenario
-ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:14:9-68
+ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:14:9-68
 	android:name
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:14:19-65
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:14:19-65
 activity#com.dam.financialgame.IntroducirDatos
-ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:15:9-74
+ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:15:9-74
 	android:name
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:15:19-71
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:15:19-71
 activity#com.dam.financialgame.SplashScreenActivity
-ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:16:9-22:20
+ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:16:9-22:20
 	android:name
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:16:19-76
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:16:19-76
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:17:13-21:29
+ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:18:17-69
+ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:20:17-77
+ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:20:27-74
 activity#com.dam.financialgame.GraficasJugadores
-ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:23:9-76
+ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:23:9-76
 	android:name
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:23:19-73
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:23:19-73
 activity#com.dam.financialgame.LineGraph
-ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:24:9-68
+ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:24:9-68
 	android:name
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:24:19-65
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:24:19-65
 activity#com.dam.financialgame.PieGraph
-ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:25:9-76
+ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:25:9-76
 	android:name
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml:25:19-64
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml:25:19-64
 uses-sdk
-INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
-INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6fff3d000e289c9dcb66a0f2f4cef1fc\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6fff3d000e289c9dcb66a0f2f4cef1fc\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7a590af11638f2514ba6a1ef1d4042dc\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\7a590af11638f2514ba6a1ef1d4042dc\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\9a7243ab6eb2df8c3b6acb52cb857c9d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\9a7243ab6eb2df8c3b6acb52cb857c9d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\271908e3209fdea66c99dd1c8d147ec5\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\271908e3209fdea66c99dd1c8d147ec5\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b35dc1484a79430b4a13f84a13d83a4c\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b35dc1484a79430b4a13f84a13d83a4c\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\dcd4fac676271bdaaaa11ca1b4b4b194\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\dcd4fac676271bdaaaa11ca1b4b4b194\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\f67148afaffeac28a75bc0485f312c9b\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\f67148afaffeac28a75bc0485f312c9b\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\84d04e880b8b1c1017d17c1ec2200b5f\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\84d04e880b8b1c1017d17c1ec2200b5f\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\613021a63dd38cb4dc6e5609af6b6d70\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\613021a63dd38cb4dc6e5609af6b6d70\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\bf80e76371b02dc09267dd88ed79b0c6\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\bf80e76371b02dc09267dd88ed79b0c6\AndroidManifest.xml:21:5-23:58
-INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
-INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
+INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
+INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/3c004992d2ea9188f859266d47027856/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/3c004992d2ea9188f859266d47027856/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/marcos/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/f36c64fa10699f2afd9a7087216ef35c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/marcos/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/f36c64fa10699f2afd9a7087216ef35c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/9786407eec55d29c1653b523bf4781b2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/9786407eec55d29c1653b523bf4781b2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/2813464303163747c55534fc33aa751f/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/2813464303163747c55534fc33aa751f/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/7501ffbc9221ccf199d9ddc1c559d342/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/7501ffbc9221ccf199d9ddc1c559d342/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/3f12518a0560d53b6f5cbfce7e439b99/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/3f12518a0560d53b6f5cbfce7e439b99/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/3b6ab04c8bfef00344e10a3ae653a7e1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/3b6ab04c8bfef00344e10a3ae653a7e1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/e6ee1ff6e71fa9bcf213db9d2d222694/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/e6ee1ff6e71fa9bcf213db9d2d222694/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/082deebd8599c79bd0fcd53379efab9a/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/082deebd8599c79bd0fcd53379efab9a/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/6003d96fd9826927d6eb47688611a971/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/6003d96fd9826927d6eb47688611a971/AndroidManifest.xml:21:5-23:58
+INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
+INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6fff3d000e289c9dcb66a0f2f4cef1fc\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/3c004992d2ea9188f859266d47027856/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
-		INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
+		INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
-		ADDED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
-		INJECTED from F:\AndroidStudioProjects\FinancialGame\app\src\main\AndroidManifest.xml
+		INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
+		ADDED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
+		INJECTED from /home/marcos/StudioProjects/TFG_FinancialGame/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6fff3d000e289c9dcb66a0f2f4cef1fc\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\9a7243ab6eb2df8c3b6acb52cb857c9d\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\9a7243ab6eb2df8c3b6acb52cb857c9d\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\271908e3209fdea66c99dd1c8d147ec5\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\271908e3209fdea66c99dd1c8d147ec5\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b35dc1484a79430b4a13f84a13d83a4c\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-v4:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\b35dc1484a79430b4a13f84a13d83a4c\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\dcd4fac676271bdaaaa11ca1b4b4b194\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\dcd4fac676271bdaaaa11ca1b4b4b194\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\f67148afaffeac28a75bc0485f312c9b\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\f67148afaffeac28a75bc0485f312c9b\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\84d04e880b8b1c1017d17c1ec2200b5f\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\84d04e880b8b1c1017d17c1ec2200b5f\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\613021a63dd38cb4dc6e5609af6b6d70\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\613021a63dd38cb4dc6e5609af6b6d70\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\bf80e76371b02dc09267dd88ed79b0c6\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\bf80e76371b02dc09267dd88ed79b0c6\AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:appcompat-v7:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/3c004992d2ea9188f859266d47027856/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/9786407eec55d29c1653b523bf4781b2/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.3.1.aar/9786407eec55d29c1653b523bf4781b2/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/2813464303163747c55534fc33aa751f/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.3.1.aar/2813464303163747c55534fc33aa751f/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/7501ffbc9221ccf199d9ddc1c559d342/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-v4-25.3.1.aar/7501ffbc9221ccf199d9ddc1c559d342/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/3f12518a0560d53b6f5cbfce7e439b99/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-fragment-25.3.1.aar/3f12518a0560d53b6f5cbfce7e439b99/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/3b6ab04c8bfef00344e10a3ae653a7e1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.3.1.aar/3b6ab04c8bfef00344e10a3ae653a7e1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/e6ee1ff6e71fa9bcf213db9d2d222694/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.3.1.aar/e6ee1ff6e71fa9bcf213db9d2d222694/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/082deebd8599c79bd0fcd53379efab9a/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/082deebd8599c79bd0fcd53379efab9a/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/6003d96fd9826927d6eb47688611a971/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/support-compat-25.3.1.aar/6003d96fd9826927d6eb47688611a971/AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6fff3d000e289c9dcb66a0f2f4cef1fc\AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/3c004992d2ea9188f859266d47027856/AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\usuario\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6fff3d000e289c9dcb66a0f2f4cef1fc\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /home/marcos/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/3c004992d2ea9188f859266d47027856/AndroidManifest.xml:26:9-47

@@ -1,10 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
+            "outputFile": "/home/marcos/StudioProjects/TFG_FinancialGame/F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\usuario\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\6fff3d000e289c9dcb66a0f2f4cef1fc\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "/home/marcos/StudioProjects/TFG_FinancialGame/C:\\Users\\usuario\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\6fff3d000e289c9dcb66a0f2f4cef1fc\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/marcos/StudioProjects/TFG_FinancialGame/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/home/marcos/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/3c004992d2ea9188f859266d47027856/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

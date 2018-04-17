@@ -1,10 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "/home/marcos/StudioProjects/TFG_FinancialGame/F:\\AndroidStudioProjects\\FinancialGame\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\usuario\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\6fff3d000e289c9dcb66a0f2f4cef1fc\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "/home/marcos/StudioProjects/TFG_FinancialGame/C:\\Users\\usuario\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\6fff3d000e289c9dcb66a0f2f4cef1fc\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/marcos/StudioProjects/TFG_FinancialGame/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "/home/marcos/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/3c004992d2ea9188f859266d47027856/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

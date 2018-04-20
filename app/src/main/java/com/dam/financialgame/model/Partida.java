@@ -20,7 +20,6 @@ public class Partida {
 
     public String getNombreWin() {
         return nombreWin;
-
     }
 
     public void setFechaPartida(String fechaPartida) {

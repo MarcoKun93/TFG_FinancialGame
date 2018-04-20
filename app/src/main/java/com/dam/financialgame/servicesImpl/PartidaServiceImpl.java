@@ -2,6 +2,7 @@ package com.dam.financialgame.servicesImpl;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.res.Resources;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
@@ -12,6 +13,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
+import com.dam.financialgame.R;
 import com.dam.financialgame.controllers.Comunidad;
 import com.dam.financialgame.services.PartidaService;
 import com.dam.financialgame.threads.VolleyApplication;
@@ -30,8 +32,6 @@ public class PartidaServiceImpl implements PartidaService {
 
     private Comunidad comunidad;
     private static PartidaServiceImpl partidaService;
-    final String URL_PARTIDAS_SUBIDAS = "https://tfgserviceses.000webhostapp.com/tablaprueba/lista.php";
-    final String URL_SUBIR_PARTIDAS = "https://tfgserviceses.000webhostapp.com/tablaprueba/nueva.php";
 
     public synchronized static PartidaServiceImpl getInstance() {
         if (partidaService == null) {
@@ -45,10 +45,10 @@ public class PartidaServiceImpl implements PartidaService {
         return partidaService;
     }
 
-    // Una petición GET
+    // Una petición GET, obtenemos la url del archivo de recursos strings.xml
     public void obtenerPartidasSubidas(Comunidad activity) {
         comunidad = activity;
-        StringRequest getRequest = new StringRequest(Request.Method.GET, URL_PARTIDAS_SUBIDAS,
+        StringRequest getRequest = new StringRequest(Request.Method.GET, activity.getResources().getString(R.string.url_partidas_subidas),
                 new Response.Listener<String>()
                 {
                     @Override
@@ -91,12 +91,12 @@ public class PartidaServiceImpl implements PartidaService {
         VolleyApplication.getInstance().getRequestQueue().add(getRequest);
     }
 
-    // Una petición POST
+    // Una petición POST, obtenemos la url del archivo de recursos strings.xml
     public void subirPartidas(final String puntuacion, final String nombre, final Activity activity) {
         final Date date = new Date();
         final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         final String fecha = dateFormat.format(date);
-        StringRequest postRequest = new StringRequest(Request.Method.POST, URL_SUBIR_PARTIDAS,
+        StringRequest postRequest = new StringRequest(Request.Method.POST, activity.getResources().getString(R.string.url_subir_partidas),
                 new Response.Listener<String>()
                 {
                     @Override

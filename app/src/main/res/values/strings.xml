@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Financial Game</string>
+    <string name="url_partidas_subidas">https://tfgserviceses.000webhostapp.com/tablaprueba/lista.php</string>
+    <string name="url_subir_partidas">https://tfgserviceses.000webhostapp.com/tablaprueba/nueva.php</string>
 </resources>

@@ -7,13 +7,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.dam.financialgame.controllers.Escenario;
-import com.dam.financialgame.services.almacenJuego;
+import com.dam.financialgame.services.AlmacenJuego;
 
 import java.util.Collections;
 import java.util.Vector;
 
-
-public class AlmacenJuegoImpl extends SQLiteOpenHelper implements almacenJuego {
+// La clase hará uso de un singleton para no tener que instanciarla cada vez que hagamos uso de ella.
+// Por eso, cuando queremos obtener la instancia, comprobamos antes que no se haya instanciado ya.
+public class AlmacenJuegoImpl extends SQLiteOpenHelper implements AlmacenJuego {
     // Hacemos uso de las bases de datos
     /* Recuerda, para borrar base de datos en dispositivo android:
         1º: Accedemos a adb shell: adb shell
@@ -21,6 +22,20 @@ public class AlmacenJuegoImpl extends SQLiteOpenHelper implements almacenJuego {
         3º: Borramos el fichero correspondiente a la base de datos que queremos borrar: rm /data/data/com.dam.consultamedicacalendario/databases/citas
      */
     private static final String TAG = Escenario.class.getSimpleName();
+    private static AlmacenJuegoImpl almacenJuego;
+
+    public synchronized static AlmacenJuegoImpl getInstance(Context context) {
+        if (almacenJuego == null) {
+            synchronized(PartidaServiceImpl.class) {
+                if (almacenJuego == null)
+                    almacenJuego = new AlmacenJuegoImpl(context);
+            }
+        }
+
+        // Return the instance
+        return almacenJuego;
+    }
+
     // La base de datos hay que limpiar las tabla jugadores cuando temrina partida
     public AlmacenJuegoImpl(Context context) {
         super(context, "juegoMesa", null, 1);

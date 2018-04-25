@@ -37,7 +37,7 @@ public class IntroducirDatos extends AppCompatActivity {
     static int VALOR_PENSIONES = 5000;
 
     // Declaramos la variable gestor de la base de datos
-    AlmacenJuegoImpl almacen = new AlmacenJuegoImpl(this);
+    AlmacenJuegoImpl almacen = AlmacenJuegoImpl.getInstance(this);
 
     // Declaramos un adaptador para guardar el vector que contiene los jugadores
     ArrayAdapter<String> adaptador;

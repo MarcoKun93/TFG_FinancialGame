@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fondo_blanco"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="closeDialogIniciaSesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="serif"
+        android:paddingLeft="5dp"
+        android:text="Registrar Usuario"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/nombreRegistrarUsuario"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton4" />
+
+    <EditText
+        android:id="@+id/nombreRegistrarUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="@+id/contraseniaRegistrarUsuario"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/contraseniaRegistrarUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/correoRegistrarUsuario"
+        app:layout_constraintStart_toStartOf="@+id/nombreRegistrarUsuario" />
+
+    <EditText
+        android:id="@+id/correoRegistrarUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Correo"
+        android:inputType="textEmailAddress"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/registrarButton"
+        app:layout_constraintStart_toStartOf="@+id/contraseniaRegistrarUsuario" />
+
+    <Button
+        android:id="@+id/registrarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

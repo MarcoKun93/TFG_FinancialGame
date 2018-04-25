@@ -18,6 +18,7 @@ public class GraficasJugadores extends AppCompatActivity {
     public static int numRondasFinJuego = 0;
     Button botonSalir;
     TabHost graficasTabHost;
+    AlmacenJuegoImpl almacen = AlmacenJuegoImpl.getInstance(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +62,7 @@ public class GraficasJugadores extends AppCompatActivity {
 
     // Método llamado desde un botón para enviar al servidor info partida al servidor, en este caso información del jugador ganador.
     public void postPartidaDesdeGraficas(View view) {
-        AlmacenJuegoImpl almacenJuego = new AlmacenJuegoImpl(this);
-        PartidaServiceImpl.getInstance().subirPartidas(Integer.toString(almacenJuego.getPuntuacionJugadorGanador()), almacenJuego.getNombreJugadorGanador(), this);
+        PartidaServiceImpl.getInstance().subirPartidas(Integer.toString(almacen.getPuntuacionJugadorGanador()), almacen.getNombreJugadorGanador(), this);
     }
 
     public void salirDeLasGraficas (View view) {

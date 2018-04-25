@@ -18,10 +18,10 @@ import com.dam.financialgame.servicesImpl.AlmacenJuegoImpl;
 import java.util.Vector;
 
 // En esta clase solo preparamos el escenario de juego, y lanzamos el fragment que ejecuta la partida
-public class MainActivity extends AppCompatActivity {
+public class InicializarPartida extends AppCompatActivity {
 
     EditText nombreJugador;
-    AlmacenJuegoImpl almacen = new AlmacenJuegoImpl(this);
+    AlmacenJuegoImpl almacen = AlmacenJuegoImpl.getInstance(this);
     Spinner rondas;
     Spinner jugadoresRegistrados;
     int numRondas = 0;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_principal);
+        setContentView(R.layout.activity_iniciarlizar_partida);
         almacen.vaciarTablaJugadores();
         inicializar();
     }

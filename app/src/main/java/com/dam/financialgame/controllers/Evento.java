@@ -55,7 +55,6 @@ public class Evento extends DialogFragment{
         super.onCreate(savedInstanceState);
         int style = DialogFragment.STYLE_NORMAL, theme = 0;
         // Indicamos el estilo que seguirá el dialog fragment, uno creado personalmente y que encontraremos en la carpeta de "values"
-        // Dentro de ese recurso, cambiamos el background de la ventana del dialog, por un color que hemos creado y registrado dentro del otro archivod e recurso "colors"
         setStyle(DialogFragment.STYLE_NO_TITLE, R.style.dialogFragment);
     }
 

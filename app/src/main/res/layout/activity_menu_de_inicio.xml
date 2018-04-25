@@ -24,8 +24,8 @@
         android:id="@+id/iniciarSesion"
         android:layout_width="47dp"
         android:layout_height="40dp"
-        android:background="@android:drawable/ic_menu_myplaces"
-        android:onClick="irIniciarSesion"
+        android:background="@drawable/iniciarsesion"
+        android:onClick="showDialogIniciaSesion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

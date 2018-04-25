@@ -2,7 +2,7 @@ package com.dam.financialgame.services;
 
 import java.util.Vector;
 
-public interface almacenJuego {
+public interface AlmacenJuego {
     //public void crearMazo();  //De momento lo hago nada mas crearse la base de datos
     public void setInfoJugador(String nombre, int rondaActual, int variable1, int variable2, int variable3, int variable4, int variable5, int variable6);
     public Vector<String> getInfoJugadores(); // Obtengo un vector de los jugadores y su puntuacion, ordenados descendente

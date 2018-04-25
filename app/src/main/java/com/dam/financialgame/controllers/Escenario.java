@@ -28,7 +28,7 @@ public class Escenario extends AppCompatActivity {
     ListView ranking;
     private static final String TAG = Escenario.class.getSimpleName();  // Para depurar
     ArrayAdapter<String> adaptador; // Para guardar los jugadores y puntuaciones
-    AlmacenJuegoImpl almacen = new AlmacenJuegoImpl(this);
+    AlmacenJuegoImpl almacen = AlmacenJuegoImpl.getInstance(this);
     int eventos = 0;
 
     // Definimos una variable long donde guarda los milisegundos del temporizador

@@ -26,7 +26,7 @@ public class PieGraph extends Fragment {
     PieChart pieChart;
     Spinner listaJugadores;
     TextView puntuacionJugador;
-    AlmacenJuegoImpl almacen;
+    AlmacenJuegoImpl almacen = AlmacenJuegoImpl.getInstance(getActivity());
 
     // Creamos un vector de colores para la representación gráfica
     Vector<Integer> colores = new Vector<Integer>();
@@ -68,8 +68,6 @@ public class PieGraph extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        almacen = new AlmacenJuegoImpl(getActivity());
 
         // Ponemos el conjunto de jugadores y un listener para que se ejecute el método recargarPieChart
         listaJugadores.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, almacen.getJugadores()));

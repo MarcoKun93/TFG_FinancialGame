@@ -39,6 +39,9 @@ public class LineGraph extends Fragment {
     // Creamos un vector de colores para la representación gráfica
     Vector<Integer> colores = new Vector<Integer>();
 
+    // Obtenemos referencia a la BBDD
+    AlmacenJuegoImpl almacen = AlmacenJuegoImpl.getInstance(getActivity());
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,9 +74,6 @@ public class LineGraph extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        // Obtenemos una referencia de la BBDD
-        AlmacenJuegoImpl almacen = new AlmacenJuegoImpl(getActivity());
 
         // Obtenemos el conjunto de nombres de los jugadores
         nombresJugadores = almacen.getJugadores();

@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Financial Game</string>
-    <string name="url_partidas_subidas">https://tfgserviceses.000webhostapp.com/tablaprueba/lista.php</string>
-    <string name="url_subir_partidas">https://tfgserviceses.000webhostapp.com/tablaprueba/nueva.php</string>
-    <string name="url_registrar_usuario">https://tfgserviceses.000webhostapp.com/v1/usuario/registro</string>
-    <string name="url_logear_usuario">https://tfgserviceses.000webhostapp.com/v1/usuario/login</string>
+    <string name="url_registrar_usuario">http://10.0.2.2:80/app.financialgame.com/v1/usuario/registro</string>
+    <string name="url_logear_usuario">http://10.0.2.2:80/app.financialgame.com/v1/usuario/login</string>
+    <string name="url_subir_Partida">http://10.0.2.2:80/app.financialgame.com/v1/partida/subirPartida</string>
+    <string name="url_obtener_partidas_subidas">http://10.0.2.2:80/app.financialgame.com/v1/partida/partidasSubidas</string>
+    <string name="url_ranking">http://10.0.2.2:80/app.financialgame.com/v1/partida/ranking</string>
+    <string name="url_partida">http://10.0.2.2:80/app.financialgame.com/v1/partida</string>
+    <string name="url_actualizar_conexion">http://10.0.2.2:80/app.financialgame.com/v1/usuario/actualizarConexion</string>
+
+    // Para servidor hosting: https://tfgserviceses.000webhostapp.com/...
+    // Para XAMPP: http://10.0.2.2:80/app.financialgame.com/...
 </resources>

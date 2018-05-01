@@ -3,6 +3,7 @@ package com.dam.financialgame.servicesImpl;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.dam.financialgame.model.Usuario;
 import com.dam.financialgame.services.AlmacenSesion;
 
 // La clase hará uso de un singleton para no tener que instanciarla cada vez que hagamos uso de ella.
@@ -29,7 +30,7 @@ public class AlmacenSesionImpl implements AlmacenSesion {
         this.context = context;
     }
 
-    public void salvarDatos(String nombre, String correo, String claveapi) {
+    public void salvarDatos(String nombre, String correo, String claveapi, String ultimaconexion) {
         //Nos ponemos a editar las preferencias.
         SharedPreferences preferencias = context.getSharedPreferences(PREFERENCIAS, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferencias.edit();
@@ -37,6 +38,7 @@ public class AlmacenSesionImpl implements AlmacenSesion {
         editor.putString("nombre", nombre);
         editor.putString("correo", correo);
         editor.putString("claveapi", claveapi);
+        editor.putString("ultimaconexion", ultimaconexion);
 
         // Commit la edición
         editor.commit();
@@ -51,6 +53,7 @@ public class AlmacenSesionImpl implements AlmacenSesion {
         editor.remove("nombre");
         editor.remove("correo");
         editor.remove("claveapi");
+        editor.remove("ultimaconexion");
 
         // Commit la edición
         editor.commit();
@@ -68,5 +71,15 @@ public class AlmacenSesionImpl implements AlmacenSesion {
         }
 
         return sesionIniciada;
+    }
+
+    public Usuario obtenerUsuarioLogeado() {
+        SharedPreferences preferencias = context.getSharedPreferences(PREFERENCIAS, Context.MODE_PRIVATE);
+        Usuario usuario = new Usuario(preferencias.getString("nombre", ""),
+                                      preferencias.getString("correo", ""),
+                                      preferencias.getString("claveapi", ""),
+                                      preferencias.getString("ultimaconexion", ""));
+
+        return usuario;
     }
 }

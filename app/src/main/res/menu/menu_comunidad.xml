@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:onClick="mostrarPerfil"
+        android:title="Perfil" />
+    <item
+        android:onClick="mostrarRanking"
+        android:title="Ranking" />
+    <item
+        android:onClick="mostrarMisPartidas"
+        android:title="Mis partidas" />
+    <item
+        android:onClick="mostrarSemilla"
+        android:title="Semilla distribuida" />
+    <item
+        android:onClick="mostrarLogros"
+        android:title="Logros" />
+    <item
+        android:onClick="salirDeComunidad"
+        android:title="Cerrar sesión" />
+</menu>

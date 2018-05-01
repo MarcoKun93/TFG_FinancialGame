@@ -11,6 +11,10 @@ import android.widget.EditText;
 import com.dam.financialgame.R;
 import com.dam.financialgame.servicesImpl.UsuarioServiceImpl;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class IniciarSesionFragment extends DialogFragment {
 
     EditText correo;
@@ -38,10 +42,16 @@ public class IniciarSesionFragment extends DialogFragment {
         contrasenia = (EditText)vista.findViewById(R.id.contraseniaIniciaSesion);
         logearButton = (Button)vista.findViewById(R.id.logearButton);
 
+        // Obtenemos la fecha del sistema.
+        final Date date = new Date();
+        final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        final String fecha = dateFormat.format(date);
+
         logearButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                // Lamamos al servicio correspondiente de registrar usuario
-                UsuarioServiceImpl.getInstance().logearUsuario(correo.getText().toString(), contrasenia.getText().toString(), (MenuDeInicio)getActivity());
+                // Llamamos al servicio correspondiente de logear usuario.
+                // Le pasamos la fecha actual para indicar que se actualice la fecha de la ultima conexion.
+                UsuarioServiceImpl.getInstance().logearUsuario(correo.getText().toString(), contrasenia.getText().toString(), fecha, (MenuDeInicio)getActivity());
             }
         });
 

@@ -11,5 +11,9 @@ public interface UsuarioService {
     public void registrarUsuario(String nombre, String contrasenia, String correo, MenuDeInicio activity);
 
     // Metodo que hace un post de la informacion introducida y me devuelve el usuario correspondiente.
-    public void logearUsuario(String correo, String contrasenia, MenuDeInicio activity);
+    // Tambien me actualiza la fecha de la ultima conexion realizada en el sistema.
+    public void logearUsuario(String correo, String contrasenia, String fecha, MenuDeInicio activity);
+
+    // Metodo que actualiza la fecha de la ultima vez que se inicio sesion en el sistema.
+    public void actualizarUltimaConexion(String fecha, MenuDeInicio activity);
 }

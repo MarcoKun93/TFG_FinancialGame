@@ -16,7 +16,8 @@
         android:theme="@style/AppTheme">
         <activity android:name="com.dam.financialgame.controllers.InicializarPartida" />
         <activity android:name="com.dam.financialgame.controllers.MenuDeInicio" />
-        <activity android:name="com.dam.financialgame.controllers.Comunidad" />
+        <activity android:name="com.dam.financialgame.controllers.Comunidad"
+            android:label="Comunidad"/>
         <activity android:name="com.dam.financialgame.controllers.Escenario" />
         <activity android:name="com.dam.financialgame.controllers.IntroducirDatos" />
         <activity android:name="com.dam.financialgame.controllers.SplashScreenActivity">

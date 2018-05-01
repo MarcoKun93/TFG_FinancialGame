@@ -4,8 +4,14 @@ import android.app.Activity;
 
 import com.dam.financialgame.controllers.Comunidad;
 
+import java.util.Date;
+
 // En esta interfaz se muestran los distintos servicios del objeto Service.
 public interface PartidaService {
-    public void obtenerPartidasSubidas(Comunidad activity);   // DE EJEMPLO: Obtenemos un listado de las partidas subidas al servidor.
-    public void subirPartidas(final String puntuacion, final String nombre, final Activity activity); // DE EJEMPLO: Enviamos al servicor el resultado de una partida.
+
+    // Obtenemos un listado de las partidas subidas al servidor.
+    public void obtenerPartidasSubidas(Comunidad activity);
+
+    // Enviamos al servicor el resultado de una partida.
+    public void subirPartida(int numrondas, int numjugadores, String nombreganador, int puntuacionganador, Activity activity);
 }

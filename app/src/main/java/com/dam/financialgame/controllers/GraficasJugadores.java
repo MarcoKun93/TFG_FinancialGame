@@ -4,12 +4,16 @@ import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TabHost;
+import android.widget.Toast;
 
 import com.dam.financialgame.R;
+import com.dam.financialgame.services.AlmacenSesion;
 import com.dam.financialgame.servicesImpl.AlmacenJuegoImpl;
+import com.dam.financialgame.servicesImpl.AlmacenSesionImpl;
 import com.dam.financialgame.servicesImpl.PartidaServiceImpl;
 
 // Esta clase administrará los fragments correspondientes a las distintas gráficas que esterán embebidos en esta clase
@@ -62,7 +66,15 @@ public class GraficasJugadores extends AppCompatActivity {
 
     // Método llamado desde un botón para enviar al servidor info partida al servidor, en este caso información del jugador ganador.
     public void postPartidaDesdeGraficas(View view) {
-        PartidaServiceImpl.getInstance().subirPartidas(Integer.toString(almacen.getPuntuacionJugadorGanador()), almacen.getNombreJugadorGanador(), this);
+        // Para acceder al servicio, el usuario debe estar logeado.
+        if (AlmacenSesionImpl.getInstance(this).comprobarLogeado()) {
+            PartidaServiceImpl.getInstance().subirPartida(numRondasFinJuego, almacen.getInfoJugadores().size(), almacen.getNombreJugadorGanador(),
+                                                        almacen.getPuntuacionJugadorGanador(), this);
+        } else {
+            Toast toast = Toast.makeText(this, "Debe estar logeado para esta acción", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER,0,0);  // Indicamos que aparezca la notificacion en el centro
+            toast.show();
+        }
     }
 
     public void salirDeLasGraficas (View view) {

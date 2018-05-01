@@ -13,15 +13,18 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dam.financialgame.R;
 import com.dam.financialgame.model.Usuario;
+import com.dam.financialgame.services.AlmacenSesion;
 import com.dam.financialgame.servicesImpl.AlmacenSesionImpl;
 
 public class MenuDeInicio extends AppCompatActivity {
 
     ImageButton iniciarSesionButton;
+    TextView nombreUsuarioLogeado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +33,13 @@ public class MenuDeInicio extends AppCompatActivity {
         setContentView(R.layout.activity_menu_de_inicio);
 
         iniciarSesionButton = (ImageButton)findViewById(R.id.iniciarSesion);
+        nombreUsuarioLogeado = (TextView)findViewById(R.id.nombreUsuarioLogeado);
 
         // Comprobamos si la sesion del usuario estaba iniciada, y tenemos la claveapi.
         // En caso positivo, cambiamos la imagen del icono.
         if(AlmacenSesionImpl.getInstance(this).comprobarLogeado()) {
             iniciarSesionButton.setBackgroundResource(R.drawable.salirsesion);
+            nombreUsuarioLogeado.setText(AlmacenSesionImpl.getInstance(this).obtenerUsuarioLogeado().getNombre());
         }
     }
 
@@ -81,8 +86,9 @@ public class MenuDeInicio extends AppCompatActivity {
             toast.setGravity(Gravity.CENTER,0,0);  // Indicamos que aparezca la notificacion en el centro
             toast.show();
 
-            // Cambiamos icono del boton iniciasesion
+            // Cambiamos icono del boton iniciasesion y vaciamos nombre de usuario logeado.
             iniciarSesionButton.setBackgroundResource(R.drawable.iniciarsesion);
+            nombreUsuarioLogeado.setText("");
         } else {
             // DialogFragment.show() will take care of adding the fragment
             // in a transaction.  We also want to remove any currently showing
@@ -150,9 +156,22 @@ public class MenuDeInicio extends AppCompatActivity {
         Log.d("Usuario parseado:", usuario.getNombre() + ", " + usuario.getCorreo() + ", " + usuario.getClaveapi());
 
         // Almacenamos la informacion de sesion
-        AlmacenSesionImpl.getInstance(this).salvarDatos(usuario.getNombre(), usuario.getCorreo(), usuario.getClaveapi());
+        AlmacenSesionImpl.getInstance(this).salvarDatos(usuario.getNombre(), usuario.getCorreo(), usuario.getClaveapi(), usuario.getUltimaconexion());
 
-        // Cambiamos el icono del imagebutton para evidencia grafica de sesion iniciada
+        // Cambiamos el icono del imagebutton para evidencia grafica de sesion iniciada, y mostramos el nombre del usuario.
         iniciarSesionButton.setBackgroundResource(R.drawable.salirsesion);
+        nombreUsuarioLogeado.setText(usuario.getNombre());
+    }
+
+    // Cuando la actividad vuelve a primer plano, compruebo que la sesión siga iniciada.
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if(!AlmacenSesionImpl.getInstance(this).comprobarLogeado()) {
+            // Cambiamos icono del boton iniciasesion y vaciamos nombre de usuario logeado.
+            iniciarSesionButton.setBackgroundResource(R.drawable.iniciarsesion);
+            nombreUsuarioLogeado.setText("");
+        }
     }
 }

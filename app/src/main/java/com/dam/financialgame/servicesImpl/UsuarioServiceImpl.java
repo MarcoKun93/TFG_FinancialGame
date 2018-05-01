@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -23,7 +24,10 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -85,8 +89,9 @@ public class UsuarioServiceImpl implements UsuarioService {
         VolleyApplication.getInstance().getRequestQueue().add(jsonRequest);
     }
 
-    // Enviamos post con formato JSON, recibimos la informacion de usuario y su claveApi necesaria para acceder al resto de servicios
-    public void logearUsuario(String correo, String contrasenia, final MenuDeInicio activity) {
+    // Enviamos post con formato JSON, recibimos la informacion de usuario y su claveApi necesaria para acceder al resto de servicios.
+    public void logearUsuario(String correo, String contrasenia, final String fecha, final MenuDeInicio activity) {
+
         Map<String, String> params = new HashMap();
         params.put("correo", correo);
         params.put("contrasenia", contrasenia);
@@ -105,8 +110,12 @@ public class UsuarioServiceImpl implements UsuarioService {
                         toast.show();
 
                         // Debemos parsear el contenido recibido del JSON, cogemos el primer elemento ya que solo devuelve un usuario.
-                        if(!parseJson(response).isEmpty())
+                        if(!parseJson(response).isEmpty()) {
                             activity.usuarioParseado(parseJson(response).get(0));
+
+                            // A continuacion, actualizamos la fecha de la ultima vez que inicio sesion.
+                            actualizarUltimaConexion(fecha, activity);
+                        }
 
                         activity.closeDialog();
                     }
@@ -127,6 +136,47 @@ public class UsuarioServiceImpl implements UsuarioService {
         VolleyApplication.getInstance().getRequestQueue().add(jsonRequest);
     }
 
+    // PUT, necesito identificarme, envio la clave api del usuario.
+    public void actualizarUltimaConexion(String fecha, final MenuDeInicio activity) {
+        final String claveApi = AlmacenSesionImpl.getInstance(activity.getApplicationContext()).obtenerUsuarioLogeado().getClaveapi();
+
+        Map<String, String> params = new HashMap();
+        params.put("ultimaconexion", fecha);
+
+        JSONObject parameters = new JSONObject(params);
+
+        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.POST, activity.getResources().getString(R.string.url_actualizar_conexion), parameters,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        //TODO: handle success
+                        Log.d("Response: ", response.toString());
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+                //TODO: handle failure
+                Log.d("ERROR Response:", error.toString());
+            }
+        }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+
+                params.put("content-type", "application/json");
+                //params.put("authorization", "2da7461a0f3011bb3f436d450cf5bb53");
+                params.put("authorization", claveApi.toString());
+
+                return params;
+            }
+        };
+
+        // Add it to the RequestQueue
+        VolleyApplication.getInstance().getRequestQueue().add(jsonRequest);
+    }
+
     /** Metodos para parsear la informacion de usuario **/
 
     // Obtenemos el usuario logeado, es un array de tamaño 1. Debido a la estructura del
@@ -141,7 +191,8 @@ public class UsuarioServiceImpl implements UsuarioService {
             Usuario usuario = new Usuario(
                     objeto.getJSONObject("usuario").getString("nombre"),
                     objeto.getJSONObject("usuario").getString("correo"),
-                    objeto.getJSONObject("usuario").getString("claveapi"));
+                    objeto.getJSONObject("usuario").getString("claveapi"),
+                    objeto.getJSONObject("usuario").getString("ultimaconexion"));
 
 
             usuarios.add(usuario);

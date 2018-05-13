@@ -1,5 +1,6 @@
 package com.dam.financialgame.controllers;
 
+import android.app.Activity;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -11,6 +12,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+
+import com.dam.financialgame.model.Semilla;
+import com.dam.financialgame.servicesImpl.AlmacenSesionImpl;
+import com.dam.financialgame.servicesImpl.SemillaServiceImpl;
 import com.travijuu.numberpicker.library.NumberPicker;
 import android.widget.Spinner;
 import android.widget.TabHost;
@@ -115,6 +120,13 @@ public class IntroducirDatos extends AppCompatActivity {
             }
         });
 
+        // Comprobamos si hay alguna semilla activada que afecte a los valores de Valor_Bonos y Valor_Pensiones.
+        if(AlmacenSesionImpl.getInstance(this).obtenerSemillaId() != 0) {
+            compruebaSemilla();
+        } else {
+            VALOR_PENSIONES = 5000;
+            VALOR_BONOS = 4000;
+        }
     }
 
     // Método que se llamará cuando hagamos clic al botón de aceptar datos
@@ -263,5 +275,20 @@ public class IntroducirDatos extends AppCompatActivity {
             df.dismiss();
         }
         ft.addToBackStack(null);
+    }
+
+    // Metodo que me cambia el valor de variables dependiendo la semilla seleccionada.
+    public void compruebaSemilla() {
+        SemillaServiceImpl.getInstance().obtenerSemilla(this, AlmacenSesionImpl.getInstance(this).obtenerSemillaId());
+    }
+
+    public void callBackCompruebaSemilla(Semilla semillaAux) {
+        if(semillaAux.getValorbonos() != 0) {
+            VALOR_BONOS = semillaAux.getValorbonos();
+        }
+
+        if(semillaAux.getValorpensiones() != 0) {
+            VALOR_PENSIONES = semillaAux.getValorpensiones();
+        }
     }
 }

@@ -2,11 +2,18 @@
     <string name="app_name">Financial Game</string>
     <string name="url_registrar_usuario">http://10.0.2.2:80/app.financialgame.com/v1/usuario/registro</string>
     <string name="url_logear_usuario">http://10.0.2.2:80/app.financialgame.com/v1/usuario/login</string>
+    <string name="url_cambiar_contrasenia">http://10.0.2.2:80/app.financialgame.com/v1/usuario/cambiarContrasenia</string>
     <string name="url_subir_Partida">http://10.0.2.2:80/app.financialgame.com/v1/partida/subirPartida</string>
     <string name="url_obtener_partidas_subidas">http://10.0.2.2:80/app.financialgame.com/v1/partida/partidasSubidas</string>
     <string name="url_ranking">http://10.0.2.2:80/app.financialgame.com/v1/partida/ranking</string>
     <string name="url_partida">http://10.0.2.2:80/app.financialgame.com/v1/partida</string>
+    <string name="url_eliminar_partida">http://10.0.2.2:80/app.financialgame.com/v1/partida</string>
     <string name="url_actualizar_conexion">http://10.0.2.2:80/app.financialgame.com/v1/usuario/actualizarConexion</string>
+    <string name="url_obtener_logros">http://10.0.2.2:80/app.financialgame.com/v1/logro/obtenerLogros</string>
+    <string name="url_logro_primera_partida">http://10.0.2.2:80/app.financialgame.com/v1/logro/logroPrimeraPartida</string>
+    <string name="url_logro_millonario">http://10.0.2.2:80/app.financialgame.com/v1/logro/logroMillonario</string>
+    <string name="url_logro_partida_larga">http://10.0.2.2:80/app.financialgame.com/v1/logro/logroPartidaLarga</string>
+    <string name="url_semilla">http://10.0.2.2:80/app.financialgame.com/v1/semilla/obtenerSemillas</string>
 
     // Para servidor hosting: https://tfgserviceses.000webhostapp.com/...
     // Para XAMPP: http://10.0.2.2:80/app.financialgame.com/...

@@ -14,6 +14,7 @@ import com.dam.financialgame.R;
 import com.dam.financialgame.services.AlmacenSesion;
 import com.dam.financialgame.servicesImpl.AlmacenJuegoImpl;
 import com.dam.financialgame.servicesImpl.AlmacenSesionImpl;
+import com.dam.financialgame.servicesImpl.LogroServiceImpl;
 import com.dam.financialgame.servicesImpl.PartidaServiceImpl;
 
 // Esta clase administrará los fragments correspondientes a las distintas gráficas que esterán embebidos en esta clase
@@ -23,6 +24,7 @@ public class GraficasJugadores extends AppCompatActivity {
     Button botonSalir;
     TabHost graficasTabHost;
     AlmacenJuegoImpl almacen = AlmacenJuegoImpl.getInstance(this);
+    Button botonSubirPartida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class GraficasJugadores extends AppCompatActivity {
         setContentView(R.layout.activity_graficas_jugadores);
         botonSalir = (Button) findViewById(R.id.salirDeLasGraficas);
         graficasTabHost = (TabHost) findViewById(R.id.graficasTabHost);
+        botonSubirPartida = (Button) findViewById(R.id.subirPartida);
 
         // Obtenemos el número de rondas totales
         numRondasFinJuego = getIntent().getIntExtra("numRondasFinJuego", numRondasFinJuego);
@@ -66,10 +69,18 @@ public class GraficasJugadores extends AppCompatActivity {
 
     // Método llamado desde un botón para enviar al servidor info partida al servidor, en este caso información del jugador ganador.
     public void postPartidaDesdeGraficas(View view) {
+        // Deshabilitamos el boton ya que solo se puede subir una misma partida una vez.
+        botonSubirPartida.setEnabled(false);
+
         // Para acceder al servicio, el usuario debe estar logeado.
         if (AlmacenSesionImpl.getInstance(this).comprobarLogeado()) {
             PartidaServiceImpl.getInstance().subirPartida(numRondasFinJuego, almacen.getInfoJugadores().size(), almacen.getNombreJugadorGanador(),
                                                         almacen.getPuntuacionJugadorGanador(), this);
+
+            // Llamamos a los servicios para comprobar si se ha cumplido algun logro.
+            LogroServiceImpl.getInstance().compruebaLogroPrimeraPartida(this);
+            LogroServiceImpl.getInstance().compruebaLogroMillonario(almacen.getPuntuacionJugadorGanador(), this);
+            LogroServiceImpl.getInstance().compruebaLogroPartidaLarga(numRondasFinJuego,this);
         } else {
             Toast toast = Toast.makeText(this, "Debe estar logeado para esta acción", Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER,0,0);  // Indicamos que aparezca la notificacion en el centro

@@ -166,7 +166,52 @@ public class UsuarioServiceImpl implements UsuarioService {
                 Map<String, String> params = new HashMap<String, String>();
 
                 params.put("content-type", "application/json");
-                //params.put("authorization", "2da7461a0f3011bb3f436d450cf5bb53");
+                params.put("authorization", claveApi.toString());
+
+                return params;
+            }
+        };
+
+        // Add it to the RequestQueue
+        VolleyApplication.getInstance().getRequestQueue().add(jsonRequest);
+    }
+
+    @Override
+    public void cambiarContrasenia(final Activity activity, String nuevaContrasenia) {
+        final String claveApi = AlmacenSesionImpl.getInstance(activity.getApplicationContext()).obtenerUsuarioLogeado().getClaveapi();
+
+        Map<String, String> params = new HashMap();
+        params.put("contrasenia", nuevaContrasenia);
+
+        JSONObject parameters = new JSONObject(params);
+
+        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.POST, activity.getResources().getString(R.string.url_cambiar_contrasenia), parameters,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        //TODO: handle success
+                        Log.d("Response: ", response.toString());
+
+                        Toast toast = Toast.makeText(activity.getApplicationContext(), "Contraseña cambiada con éxito", Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER,0,0);  // Indicamos que aparezca la notificacion en el centro
+                        toast.show();
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+                //TODO: handle failure
+                Log.d("ERROR Response:", error.toString());
+                Toast toast = Toast.makeText(activity.getApplicationContext(), "Error", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER,0,0);  // Indicamos que aparezca la notificacion en el centro
+                toast.show();
+            }
+        }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+
+                params.put("content-type", "application/json");
                 params.put("authorization", claveApi.toString());
 
                 return params;

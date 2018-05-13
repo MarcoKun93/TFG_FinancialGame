@@ -18,4 +18,13 @@ public interface AlmacenSesion {
 
     // Devolvemos el objeto usuario logeado.
     public Usuario obtenerUsuarioLogeado();
+
+    // Guardamos el identificador de la semilla elegida.
+    public void guardarSemillaId(int semillaId);
+
+    // Obtenemos el idSemilla elegida.
+    public int obtenerSemillaId();
+
+    // Borramos la semilla seleccionada alamacenada en el archivo de rpeferencias de sesion.
+    public void borrarSemilla();
 }

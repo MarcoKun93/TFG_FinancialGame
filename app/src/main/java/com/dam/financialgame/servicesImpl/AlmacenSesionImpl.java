@@ -8,6 +8,7 @@ import com.dam.financialgame.services.AlmacenSesion;
 
 // La clase hará uso de un singleton para no tener que instanciarla cada vez que hagamos uso de ella.
 // Por eso, cuando queremos obtener la instancia, comprobamos antes que no se haya instanciado ya.
+// El archivo de preferencias está alojado en /data/data/com.dam.financialgame/shared_prefs/sesion.xml
 public class AlmacenSesionImpl implements AlmacenSesion {
 
     private static AlmacenSesionImpl almacenSesion;
@@ -39,6 +40,7 @@ public class AlmacenSesionImpl implements AlmacenSesion {
         editor.putString("correo", correo);
         editor.putString("claveapi", claveapi);
         editor.putString("ultimaconexion", ultimaconexion);
+        editor.putInt("idSemilla", 0);
 
         // Commit la edición
         editor.commit();
@@ -54,6 +56,7 @@ public class AlmacenSesionImpl implements AlmacenSesion {
         editor.remove("correo");
         editor.remove("claveapi");
         editor.remove("ultimaconexion");
+        editor.remove("idSemilla");
 
         // Commit la edición
         editor.commit();
@@ -81,5 +84,35 @@ public class AlmacenSesionImpl implements AlmacenSesion {
                                       preferencias.getString("ultimaconexion", ""));
 
         return usuario;
+    }
+
+    public void guardarSemillaId(int idSemilla) {
+        SharedPreferences preferencias = context.getSharedPreferences(PREFERENCIAS, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferencias.edit();
+
+        editor.putInt("idSemilla", idSemilla);
+
+        // Commit la edición
+        editor.commit();
+
+    }
+
+    public int obtenerSemillaId() {
+        SharedPreferences preferencias = context.getSharedPreferences(PREFERENCIAS, Context.MODE_PRIVATE);
+
+        return preferencias.getInt("idSemilla", 0);
+    }
+
+    // En realidad no la elimino, solo la inicializo a 0.
+    public void borrarSemilla() {
+        // Editamos nuevamente las preferencias
+        SharedPreferences preferencias = context.getSharedPreferences(PREFERENCIAS, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferencias.edit();
+
+        // Removemos los datos agregados
+        editor.putInt("idSemilla", 0);
+
+        // Commit la edición
+        editor.commit();
     }
 }

@@ -16,4 +16,7 @@ public interface UsuarioService {
 
     // Metodo que actualiza la fecha de la ultima vez que se inicio sesion en el sistema.
     public void actualizarUltimaConexion(String fecha, MenuDeInicio activity);
+
+    // Metodo que cambia la contraseña.
+    public void cambiarContrasenia(Activity activity, String nuevaContrasenia);
 }

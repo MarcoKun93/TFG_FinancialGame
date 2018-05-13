@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.view.Gravity;
 
 import com.dam.financialgame.R;
 import com.dam.financialgame.servicesImpl.AlmacenJuegoImpl;
+import com.dam.financialgame.servicesImpl.AlmacenSesionImpl;
 
 import java.util.Vector;
 
@@ -26,6 +28,7 @@ public class InicializarPartida extends AppCompatActivity {
     Spinner jugadoresRegistrados;
     int numRondas = 0;
     static int NUM_JUGADORES_MAX = 6;
+    LinearLayout notaUsoSemilla;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,7 @@ public class InicializarPartida extends AppCompatActivity {
         nombreJugador = (EditText) findViewById(R.id.nombreJugador);
         rondas = (Spinner) findViewById(R.id.numeroRondas);
         jugadoresRegistrados = (Spinner) findViewById(R.id.JugadoresRegistrados);
+        notaUsoSemilla = (LinearLayout) findViewById(R.id.notaUsoSemilla);
 
         // Ponemos las rondas totales disponible, y un listener para guardar el dato. Una ronda está compuesto por 5 eventos
         String[] rondasDisponibles = {"1","2","5","8"};
@@ -55,6 +59,13 @@ public class InicializarPartida extends AppCompatActivity {
                 numRondas = 1;
             }
         });
+
+        // Comprobamos si hemos elegido una semilla para jugar con ella, antes ver si usuario logeado. En caso positivo mostramos el mensaje.
+        if(AlmacenSesionImpl.getInstance(this).comprobarLogeado() && AlmacenSesionImpl.getInstance(this).obtenerSemillaId() != 0) {
+            notaUsoSemilla.setVisibility(View.VISIBLE);
+        } else {
+            notaUsoSemilla.setVisibility(View.INVISIBLE);
+        }
     }
 
     public void añadirJugador(View view) {

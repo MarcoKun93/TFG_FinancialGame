@@ -2,6 +2,7 @@ package com.dam.financialgame.controllers;
 
 import android.app.DialogFragment;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.EditText;
 
 import com.dam.financialgame.R;
 import com.dam.financialgame.servicesImpl.UsuarioServiceImpl;
+
+import java.util.regex.Pattern;
 
 public class RegistrarUsuarioFragment extends DialogFragment {
 
@@ -43,11 +46,22 @@ public class RegistrarUsuarioFragment extends DialogFragment {
 
         registrarButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                // Lamamos al servicio correspondiente de registrar usuario
-                UsuarioServiceImpl.getInstance().registrarUsuario(nombre.getText().toString(), contrasenia.getText().toString(), correo.getText().toString(), (MenuDeInicio)getActivity());
+                // Comprobamos que el formato rea correcto.
+                if(validarEmail(correo.getText().toString())) {
+                    // Lamamos al servicio correspondiente de registrar usuario
+                    UsuarioServiceImpl.getInstance().registrarUsuario(nombre.getText().toString(), contrasenia.getText().toString(), correo.getText().toString(), (MenuDeInicio)getActivity());
+                } else {
+                    correo.setText("Email no válido");
+                }
             }
         });
 
         return vista;
+    }
+
+    public boolean validarEmail(String email) {
+        Pattern pattern = Patterns.EMAIL_ADDRESS;
+
+        return pattern.matcher(email).matches();
     }
 }

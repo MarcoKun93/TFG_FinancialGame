@@ -8,8 +8,12 @@ public class Partida {
     private String fecha;
     private int numrondas;
     private int numjugadores;
+    private String nombreganador;
+    private int puntuacionganador;
+    private int idUsuario;
+    private int idSemilla;
 
-    public Partida(int idPartida, String fecha, int numrondas, int numjugadores, String nombreganador, int puntuacionganador, int idUsuario) {
+    public Partida(int idPartida, String fecha, int numrondas, int numjugadores, String nombreganador, int puntuacionganador, int idUsuario, int idSemilla) {
         this.idPartida = idPartida;
         this.fecha = fecha;
         this.numrondas = numrondas;
@@ -17,11 +21,16 @@ public class Partida {
         this.nombreganador = nombreganador;
         this.puntuacionganador = puntuacionganador;
         this.idUsuario = idUsuario;
+        this.idSemilla = idSemilla;
     }
 
-    private String nombreganador;
-    private int puntuacionganador;
-    private int idUsuario;
+    public int getIdSemilla() {
+        return idSemilla;
+    }
+
+    public void setIdSemilla(int idSemilla) {
+        this.idSemilla = idSemilla;
+    }
 
     public int getIdPartida() {
         return idPartida;
@@ -81,14 +90,10 @@ public class Partida {
 
     @Override
     public String toString() {
-        return "Partida{" +
-                "idPartida=" + idPartida +
-                ", fecha='" + fecha + '\'' +
-                ", numrondas=" + numrondas +
-                ", numjugadores=" + numjugadores +
-                ", nombreganador='" + nombreganador + '\'' +
-                ", puntuacionganador=" + puntuacionganador +
-                ", idUsuario=" + idUsuario +
-                '}';
+        return " Fecha: " + fecha + "\n" + " Puntuacion del ganador: " + puntuacionganador;
+    }
+
+    public String toStringRanking() {
+        return " Fecha: " + fecha + "\n" + " Puntuacion del ganador: " + puntuacionganador + "\n" + " Usuario: " + nombreganador;
     }
 }

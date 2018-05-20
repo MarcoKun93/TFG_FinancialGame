@@ -18,7 +18,7 @@
             <ListView
                 android:id="@+id/listViewSemillas"
                 android:layout_width="wrap_content"
-                android:layout_height="110dp"
+                android:layout_height="130dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/background_white"
                 android:scrollbars="vertical" />
@@ -44,8 +44,8 @@
 
                 <TextView
                     android:id="@+id/semillaTitulo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
                     android:layout_weight="1"
                     android:textColor="@android:color/black" />
             </LinearLayout>
@@ -67,14 +67,29 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/semillaDescripcion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="serif"
-                    android:textColor="@android:color/black"
-                    android:typeface="serif" />
+                <ScrollView
+                    android:layout_width="220dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/semillaDescripcion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="serif"
+                            android:isScrollContainer="true"
+                            android:scrollbars="vertical"
+                            android:textColor="@android:color/black"
+                            android:typeface="serif" />
+                    </LinearLayout>
+                </ScrollView>
+
             </LinearLayout>
 
             <LinearLayout
@@ -94,12 +109,25 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/semillaEfecto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textColor="@android:color/black" />
+                <ScrollView
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/semillaEfecto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+                </ScrollView>
+
             </LinearLayout>
 
             <CheckBox

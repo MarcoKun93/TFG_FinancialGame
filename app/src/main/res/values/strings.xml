@@ -15,6 +15,9 @@
     <string name="url_logro_partida_larga">http://10.0.2.2:80/app.financialgame.com/v1/logro/logroPartidaLarga</string>
     <string name="url_semilla">http://10.0.2.2:80/app.financialgame.com/v1/semilla/obtenerSemillas</string>
 
+    <string name="pdf_instrucciones">ejemploinstruccionesjuego.pdf</string>
+    <string name="pdf_manualDeUsuario">ejemplomanualdeusuarioapp.pdf</string>
+
     // Para servidor hosting: https://tfgserviceses.000webhostapp.com/...
     // Para XAMPP: http://10.0.2.2:80/app.financialgame.com/...
 </resources>

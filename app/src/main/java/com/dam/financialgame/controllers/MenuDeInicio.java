@@ -61,14 +61,11 @@ public class MenuDeInicio extends AppCompatActivity {
         }
     }
 
-    // Las instrucciones serán mostradas en un fragment, el método NO arrancará un activity.
+    // Las instrucciones serán mostradas en una actividad aparte.
     public void irInstrucciones(View view) {
-
-    }
-
-    // Se realiza en un fragment, el método NO arrancará un activity. Se llamará a un Servicio.
-    public void irIniciarSesion(View view) {
-
+        // Start the next activity
+        Intent mainIntent = new Intent().setClass(view.getContext(), ManualesDeUsuario.class);
+        startActivity(mainIntent);
     }
 
     // Método que lanza el dialogFragment referente a la ventana de iniciar sesión.

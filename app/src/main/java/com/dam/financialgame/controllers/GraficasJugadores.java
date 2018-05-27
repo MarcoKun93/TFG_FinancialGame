@@ -1,5 +1,8 @@
 package com.dam.financialgame.controllers;
 
+import android.app.DialogFragment;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -72,7 +75,7 @@ public class GraficasJugadores extends AppCompatActivity {
         // Deshabilitamos el boton ya que solo se puede subir una misma partida una vez.
         botonSubirPartida.setEnabled(false);
 
-        // Para acceder al servicio, el usuario debe estar logeado.
+        // Para acceder al servicio, el usuario debe estar logeado. En caso negativo, le mostramos el dialogo para identificarse.
         if (AlmacenSesionImpl.getInstance(this).comprobarLogeado()) {
             PartidaServiceImpl.getInstance().subirPartida(numRondasFinJuego, almacen.getInfoJugadores().size(), almacen.getNombreJugadorGanador(),
                                                         almacen.getPuntuacionJugadorGanador(), this);
@@ -85,8 +88,12 @@ public class GraficasJugadores extends AppCompatActivity {
             Toast toast = Toast.makeText(this, "Debe estar logeado para esta acción", Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER,0,0);  // Indicamos que aparezca la notificacion en el centro
             toast.show();
+
+            // En un futuro, mostramos el dialogo para que se pueda identificar usuario.
         }
     }
+
+
 
     public void salirDeLasGraficas (View view) {
         finish();

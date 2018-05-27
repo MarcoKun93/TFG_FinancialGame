@@ -3,6 +3,7 @@ package com.dam.financialgame.controllers;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -121,6 +122,9 @@ public class MisPartidasFragment extends Fragment{
             numjugadoresPartida.setText("");
             nombreganadorPartida.setText("");
             puntuacionganadorPartida.setText("");
+
+            // Dormimos la aplicación medio segundo para que el servidor tenga tiempo de procesar la petición anterior
+            SystemClock.sleep(500);
             PartidaServiceImpl.getInstance().obtenerPartidasSubidas((Comunidad) getActivity());
         }
     }

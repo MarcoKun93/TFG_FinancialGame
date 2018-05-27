@@ -115,4 +115,41 @@ public class AlmacenSesionImpl implements AlmacenSesion {
         // Commit la edición
         editor.commit();
     }
+
+    // Almacenamos los ids online
+    public void guardarIdsOnline(int idJugadorOnline, int idPartidaOnline) {
+        SharedPreferences preferencias = context.getSharedPreferences(PREFERENCIAS, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferencias.edit();
+
+        editor.putInt("idJugadorOnline", idJugadorOnline);
+        editor.putInt("idPartidaOnline", idPartidaOnline);
+
+        // Commit la edición
+        editor.commit();
+    }
+
+    public int getIdJugadorOnlineAlmacenado() {
+        SharedPreferences preferencias = context.getSharedPreferences(PREFERENCIAS, Context.MODE_PRIVATE);
+
+        return preferencias.getInt("idJugadorOnline", 0);
+    }
+
+    public int getIdPartdaOnlineAlmacenado() {
+        SharedPreferences preferencias = context.getSharedPreferences(PREFERENCIAS, Context.MODE_PRIVATE);
+
+        return preferencias.getInt("idPartidaOnline", 0);
+    }
+
+    public void borrarIdsOnline() {
+        // Editamos nuevamente las preferencias
+        SharedPreferences preferencias = context.getSharedPreferences(PREFERENCIAS, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferencias.edit();
+
+        // Removemos los datos agregados
+        editor.remove("idJugadorOnline");
+        editor.remove("idPartidaOnline");
+
+        // Commit la edición
+        editor.commit();
+    }
 }

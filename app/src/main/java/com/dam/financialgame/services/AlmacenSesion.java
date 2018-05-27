@@ -27,4 +27,12 @@ public interface AlmacenSesion {
 
     // Borramos la semilla seleccionada alamacenada en el archivo de rpeferencias de sesion.
     public void borrarSemilla();
-}
+
+    public void guardarIdsOnline(int idJugadorOnline, int idPartidaOnline);
+
+    public int getIdJugadorOnlineAlmacenado();
+
+    public int getIdPartdaOnlineAlmacenado();
+
+    public void borrarIdsOnline();
+    }

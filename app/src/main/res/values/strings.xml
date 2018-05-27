@@ -15,8 +15,32 @@
     <string name="url_logro_partida_larga">http://10.0.2.2:80/app.financialgame.com/v1/logro/logroPartidaLarga</string>
     <string name="url_semilla">http://10.0.2.2:80/app.financialgame.com/v1/semilla/obtenerSemillas</string>
 
-    <string name="pdf_instrucciones">ejemploinstruccionesjuego.pdf</string>
+    <string name="pdf_instrucciones">instruccionesapp.pdf</string>
     <string name="pdf_manualDeUsuario">ejemplomanualdeusuarioapp.pdf</string>
+
+    // URL para servicios partida online
+    <string name="url_get_partidas_online">http://10.0.2.2:80/app.financialgame.com/v1/partidaonline/partidasOnline</string>
+    <string name="url_crear_partida_online">http://10.0.2.2:80/app.financialgame.com/v1/partidaonline/crearPartidaOnline</string>
+    <string name="url_crear_jugador_online">http://10.0.2.2:80/app.financialgame.com/v1/jugadoronline/jugadorOnline</string>
+    <string name="url_cambiar_estado_partida">http://10.0.2.2:80/app.financialgame.com/v1/partidaonline/postEstadoPartidaOnline</string>
+    <string name="url_obtener_estado_partida">http://10.0.2.2:80/app.financialgame.com/v1/partidaonline/getEstadoPartidaOnline</string>
+    <string name="url_obtener_jugadores_unidos">http://10.0.2.2:80/app.financialgame.com/v1/jugadoronline/jugadoresOnline</string>
+    <string name="url_obtener_ids_online">http://10.0.2.2:80/app.financialgame.com/v1/jugadoronline/idsOnline</string>
+    <string name="url_cambiar_estado_jugador">http://10.0.2.2:80/app.financialgame.com/v1/jugadoronline/postEstadoJugadorOnline</string>
+    <string name="url_cambiar_numero_jugadores">http://10.0.2.2:80/app.financialgame.com/v1/partidaonline/postnumeroJugadores</string>
+    <string name="url_borrar_jugador_online">http://10.0.2.2:80/app.financialgame.com/v1/jugadoronline</string> //Delete
+    <string name="url_borrar_partida_online">http://10.0.2.2:80/app.financialgame.com/v1/partidaonline</string> //Delete
+
+    // Strings de los distintos estados de una partida online
+    <string name="estado_partida_online_creada">0</string>
+    <string name="estado_partida_online_inicializada">1</string>
+    <string name="estado_partida_online_en_proceso">2</string>
+    <string name="estado_partida_online_en_espera">3</string>
+    <string name="estado_partida_online_finalizada">4</string>
+
+    // Strings de los distintos estados de un jugador online
+    <string name="estado_jugador_creado">0</string>
+    <string name="estado_jugador_preparado">1</string>
 
     // Para servidor hosting: https://tfgserviceses.000webhostapp.com/...
     // Para XAMPP: http://10.0.2.2:80/app.financialgame.com/...

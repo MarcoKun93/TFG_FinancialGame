@@ -8,11 +8,10 @@
     tools:layout_editor_absoluteY="25dp">
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/cerrarIniciarSesionDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
-        android:onClick="closeDialogIniciaSesion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/btn_dialog" />
@@ -30,7 +29,7 @@
         android:textSize="24sp"
         android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/correoInicioSesion"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton5" />
+        app:layout_constraintEnd_toStartOf="@+id/cerrarIniciarSesionDialog" />
 
     <EditText
         android:id="@+id/correoInicioSesion"
@@ -67,11 +66,11 @@
         android:layout_marginBottom="16dp"
         android:layout_marginStart="13dp"
         android:text="Login"
-        app:layout_constraintBottom_toTopOf="@+id/button17"
-        app:layout_constraintStart_toStartOf="@+id/button17" />
+        app:layout_constraintBottom_toTopOf="@+id/buttonRegistrar"
+        app:layout_constraintStart_toStartOf="@+id/buttonRegistrar" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/buttonRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="showDialogRegistrarUsuario"

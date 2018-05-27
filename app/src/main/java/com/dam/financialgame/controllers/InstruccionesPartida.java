@@ -16,9 +16,8 @@ import com.shockwave.pdfium.PdfDocument;
 
 import java.util.List;
 
-public class ManualesDeUsuario extends AppCompatActivity implements OnPageChangeListener,OnLoadCompleteListener {
+public class InstruccionesPartida extends AppCompatActivity implements OnPageChangeListener,OnLoadCompleteListener {
 
-    TabHost manualesDeUsuario;
     PDFView pdfView;
     Integer pageNumber = 0;
     String pdfFileName;
@@ -26,19 +25,7 @@ public class ManualesDeUsuario extends AppCompatActivity implements OnPageChange
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manuales_de_usuario);
-
-        // Inicializamos el TabHost.
-        manualesDeUsuario = (TabHost) findViewById(R.id.manualesTabHost);
-        manualesDeUsuario.setup();
-        TabHost.TabSpec tab1 = manualesDeUsuario.newTabSpec("tab1");  //aspectos de cada Tab (pestaña)
-        TabHost.TabSpec tab2 = manualesDeUsuario.newTabSpec("tab2");
-        tab1.setIndicator("INTRUCCIONES");    //qué queremos que aparezca en las pestañas
-        tab1.setContent(R.id.instruccionesPartida); //definimos el id de cada Tab (pestaña)
-        tab2.setIndicator("MANUAL DE USUARIO");
-        tab2.setContent(R.id.manualDeUsuario);
-        manualesDeUsuario.addTab(tab1); //añadimos los tabs ya programados
-        manualesDeUsuario.addTab(tab2);
+        setContentView(R.layout.activity_instrucciones_partida);
 
         // Enlazamos los pdf view.
         pdfView = (PDFView)findViewById(R.id.pdfViewInstrucciones);
@@ -81,12 +68,5 @@ public class ManualesDeUsuario extends AppCompatActivity implements OnPageChange
                 printBookmarksTree(b.getChildren(), sep + "-");
             }
         }
-    }
-
-    // El manual de usuario se mostrará en una actividad aparte.
-    public void irManualDeUsuario(View view) {
-        // Start the next activity
-        Intent mainIntent = new Intent().setClass(view.getContext(), ManualDeUsuario.class);
-        startActivity(mainIntent);
     }
 }

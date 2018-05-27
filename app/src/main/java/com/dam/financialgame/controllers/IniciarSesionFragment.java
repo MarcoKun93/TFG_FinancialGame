@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.dam.financialgame.R;
 import com.dam.financialgame.servicesImpl.UsuarioServiceImpl;
@@ -20,6 +21,9 @@ public class IniciarSesionFragment extends DialogFragment {
     EditText correo;
     EditText contrasenia;
     Button logearButton;
+    Button registrarUsuario;
+    ImageButton cerrarDialog;
+    private boolean desdeMenuInicio = false;
 
     public static IniciarSesionFragment newInstance() {
         IniciarSesionFragment frag = new IniciarSesionFragment();
@@ -32,6 +36,12 @@ public class IniciarSesionFragment extends DialogFragment {
         int style = DialogFragment.STYLE_NORMAL, theme = 0;
         // Indicamos el estilo que seguirá el dialog fragment, uno creado personalmente y que encontraremos en la carpeta de "values"
         setStyle(DialogFragment.STYLE_NO_TITLE, R.style.dialogFragment);
+
+        // Este fragmento, como será llamado desde varias actividades, se le manda un parametro indicando si se le llama del menu de
+        // inicio o de otro sitio. Como el boton registrar solo esta activo en inicio, lo desactivamos en caso contrario.
+        if (getArguments() != null) {
+            desdeMenuInicio = getArguments().getBoolean("desdeMenuInicio", false);
+        }
     }
 
     public View onCreateView(LayoutInflater inflador, ViewGroup contenedor, Bundle savedInstanceState) {
@@ -41,6 +51,8 @@ public class IniciarSesionFragment extends DialogFragment {
         correo = (EditText)vista.findViewById(R.id.correoInicioSesion);
         contrasenia = (EditText)vista.findViewById(R.id.contraseniaIniciaSesion);
         logearButton = (Button)vista.findViewById(R.id.logearButton);
+        cerrarDialog = (ImageButton)vista.findViewById(R.id.cerrarIniciarSesionDialog);
+        registrarUsuario = (Button)vista.findViewById(R.id.buttonRegistrar);
 
         // Obtenemos la fecha del sistema.
         final Date date = new Date();
@@ -54,6 +66,17 @@ public class IniciarSesionFragment extends DialogFragment {
                 UsuarioServiceImpl.getInstance().logearUsuario(correo.getText().toString(), contrasenia.getText().toString(), fecha, (MenuDeInicio)getActivity());
             }
         });
+
+        // Listener a la imagebutton para que, si hacemos clic, se cierre la ventana.
+        cerrarDialog.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                dismiss();
+            }
+        });
+
+        if(!desdeMenuInicio) {
+            registrarUsuario.setClickable(false);
+        }
 
         return vista;
     }

@@ -29,10 +29,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".controllers.GraficasJugadores" />
-        <activity android:name=".controllers.LineGraph" />
-        <activity android:name=".controllers.PieGraph" />
-        <activity android:name=".controllers.ManualesDeUsuario" />
-        <activity android:name=".controllers.ManualDeUsuario"></activity>
+        <activity android:name=".controllers.InstruccionesPartida" />
+        <activity android:name=".controllers.ManualDeUsuario" />
+        <activity android:name=".controllers.PrincipalPartidasOnline" />
+        <activity android:name=".controllers.PartidaOnlineInicializada" />
+        <activity android:name=".controllers.EscenarioOnline"></activity>
     </application>
 
 </manifest>

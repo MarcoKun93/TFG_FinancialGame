@@ -5,19 +5,32 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_verde_nombrelogo"
+    android:background="@drawable/fondo_verde_nombre"
     tools:layout_editor_absoluteY="25dp">
 
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="206dp"
+        android:layout_height="208dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="69dp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icono_principal" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="@android:style/Widget.Holo.Light.ProgressBar"
         android:layout_width="100dp"
-        android:layout_height="122dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="96dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
 
 </android.support.constraint.ConstraintLayout>

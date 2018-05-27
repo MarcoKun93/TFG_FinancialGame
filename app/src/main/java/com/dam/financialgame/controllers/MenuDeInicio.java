@@ -47,6 +47,18 @@ public class MenuDeInicio extends AppCompatActivity {
         startActivity(mainIntent);
     }
 
+    // Se arrancará la actividad de iniciar partida online.
+    public void irIniciarPartidaOnline(View view) {
+        // Start the next activity
+        if(AlmacenSesionImpl.getInstance(this).comprobarLogeado()) {
+            // Start the next activity
+            Intent mainIntent = new Intent().setClass(view.getContext(), PrincipalPartidasOnline.class);
+            startActivity(mainIntent);
+        } else {
+            showDialogIniciaSesion(view);
+        }
+    }
+
     // El método iniciará una actividad que arrancará todas las funcionalidades online del juego.
     public void irComunidad(View view) {
         // Comprobamos si la sesion del usuario estaba iniciada, y tenemos la claveapi.
@@ -61,11 +73,23 @@ public class MenuDeInicio extends AppCompatActivity {
         }
     }
 
-    // Las instrucciones serán mostradas en una actividad aparte.
+    // Las instrucciones serán mostradas de forma separada en actividades, antes se lanza un fragment para seleccionar cual ver.
     public void irInstrucciones(View view) {
-        // Start the next activity
-        Intent mainIntent = new Intent().setClass(view.getContext(), ManualesDeUsuario.class);
-        startActivity(mainIntent);
+        // DialogFragment.show() will take care of adding the fragment
+        // in a transaction.  We also want to remove any currently showing
+        // dialog, so make our own transaction and take care of that here.
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        Fragment prev = getFragmentManager().findFragmentByTag("dialogManuales");
+        if (prev != null) {
+            //ft.remove(prev);
+            DialogFragment df = (DialogFragment) prev;
+            df.dismiss();
+        }
+        ft.addToBackStack(null);
+
+        // Create and show the dialog.
+        DialogFragment newFragment = OpcionesDeManualFragment.newInstance();
+        newFragment.show(ft, "dialogManuales"); // Instanciamos el fragment con el tag dialogManuales
     }
 
     // Método que lanza el dialogFragment referente a la ventana de iniciar sesión.
@@ -98,6 +122,9 @@ public class MenuDeInicio extends AppCompatActivity {
 
             // Create and show the dialog.
             DialogFragment newFragment = IniciarSesionFragment.newInstance();
+            Bundle bundle = new Bundle();
+            bundle.putBoolean("desdeMenuInicio", true);
+            newFragment.setArguments(bundle);
             newFragment.show(ft, "dialogIniciaSesion"); // Instanciamos el fragment con el tag dialogFragment
         }
     }

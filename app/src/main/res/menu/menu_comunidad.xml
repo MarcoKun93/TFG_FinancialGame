@@ -13,7 +13,7 @@
         android:title="Mis partidas" />
     <item
         android:onClick="mostrarSemilla"
-        android:title="Semilla distribuida" />
+        android:title="Escenario preestablecido" />
     <item
         android:onClick="mostrarLogros"
         android:title="Logros" />

@@ -1,14 +1,12 @@
 package com.dam.financialgame.threads;
 
-import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
 
-import com.dam.financialgame.controllers.PrincipalPartidasOnline;
-import com.dam.financialgame.model.Partida;
+import com.dam.financialgame.controllers.activities.PrincipalPartidasOnline;
 import com.dam.financialgame.servicesImpl.PartidaOnlineServiceImpl;
 
 /* Clase que gestionara, en segundo plano, los estados de la partida. En este caso, las partidas online con estado creadas.

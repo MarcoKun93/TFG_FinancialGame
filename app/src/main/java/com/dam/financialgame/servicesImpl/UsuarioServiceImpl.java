@@ -1,7 +1,6 @@
 package com.dam.financialgame.servicesImpl;
 
 import android.app.Activity;
-import android.util.JsonReader;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
@@ -12,24 +11,16 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.dam.financialgame.R;
-import com.dam.financialgame.controllers.MenuDeInicio;
+import com.dam.financialgame.controllers.activities.MenuDeInicio;
 import com.dam.financialgame.model.Usuario;
 import com.dam.financialgame.services.UsuarioService;
 import com.dam.financialgame.threads.VolleyApplication;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 // La clase hará uso de un singleton para no tener que instanciarla cada vez que hagamos uso de ella.

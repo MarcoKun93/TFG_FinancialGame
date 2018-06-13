@@ -2,8 +2,8 @@ package com.dam.financialgame.services;
 
 import android.app.Activity;
 
-import com.dam.financialgame.controllers.PartidaOnlineInicializada;
-import com.dam.financialgame.controllers.PrincipalPartidasOnline;
+import com.dam.financialgame.controllers.activities.PartidaOnlineInicializada;
+import com.dam.financialgame.controllers.activities.PrincipalPartidasOnline;
 
 public interface JugadorOnlineService {
 

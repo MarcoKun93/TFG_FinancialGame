@@ -93,7 +93,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_weight="1"
                     android:fontFamily="serif"
-                    android:text="Semilla seleccionada"
+                    android:text="Escenario preestablecido"
                     android:textColor="@android:color/black"
                     android:typeface="serif" />
             </LinearLayout>

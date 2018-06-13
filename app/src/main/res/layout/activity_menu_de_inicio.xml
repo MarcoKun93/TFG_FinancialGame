@@ -44,7 +44,7 @@
                     android:layout_width="41dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:background="@drawable/iniciarsesion"
+                    android:background="@drawable/iconologin"
                     android:onClick="showDialogIniciaSesion"
                     tools:layout_editor_absoluteX="8dp" />
 

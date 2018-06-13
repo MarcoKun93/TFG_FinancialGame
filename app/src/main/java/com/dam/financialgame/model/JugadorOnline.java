@@ -127,4 +127,9 @@ public class JugadorOnline {
         this.isAnfitrion = isAnfitrion;
         this.estado = estado;
     }
+
+    @Override
+    public String toString() {
+        return " "+getNombreUsuario()+"\n"+" Puntuación actual: "+Integer.toString(puntuacion)+"\n";
+    }
 }

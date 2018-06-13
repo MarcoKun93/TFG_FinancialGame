@@ -6,10 +6,8 @@ import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
 
-import com.dam.financialgame.controllers.PartidaOnlineInicializada;
-import com.dam.financialgame.controllers.PrincipalPartidasOnline;
+import com.dam.financialgame.controllers.activities.PartidaOnlineInicializada;
 import com.dam.financialgame.servicesImpl.JugadorOnlineServiceImpl;
-import com.dam.financialgame.servicesImpl.PartidaOnlineServiceImpl;
 
 /* Clase que gestiona el estado de la partida y jugadores online. Hace peticiones periodicas sobre los jugadores online unidos.
     El proceso principal los gestiona, en caso de que todos los jugadores esten preparados, se inicia la partida. Cuando avandonamos

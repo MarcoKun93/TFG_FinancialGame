@@ -36,7 +36,7 @@
                 android:cropToPadding="false"
                 android:onClick="iniciarTemporizador"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/boton_play" />
+                app:srcCompat="@drawable/iconotemporizador" />
 
             <TextView
                 android:id="@+id/numRondas"
@@ -55,6 +55,8 @@
                 android:id="@+id/rankingJugadores"
                 android:layout_width="wrap_content"
                 android:layout_height="220dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/bordeverde"
                 android:fadeScrollbars="false"
                 android:fastScrollAlwaysVisible="false"
                 android:focusable="false"

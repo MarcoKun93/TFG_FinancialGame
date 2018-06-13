@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.dam.financialgame.controllers.Escenario;
+import com.dam.financialgame.controllers.activities.Escenario;
 import com.dam.financialgame.services.AlmacenJuego;
 
 import java.util.Collections;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_blanco"
-    tools:context="com.dam.financialgame.controllers.PartidaOnlineInicializada">
+    tools:context="com.dam.financialgame.controllers.activities.PartidaOnlineInicializada">
 
     <LinearLayout
         android:id="@+id/linearLayout5"
@@ -32,7 +32,7 @@
             android:layout_width="300dp"
             android:layout_height="250dp"
             android:layout_margin="20dp"
-            android:background="@drawable/background_white" />
+            android:background="@drawable/bordeverde" />
 
         <TextView
             android:id="@+id/textoNumRondas"

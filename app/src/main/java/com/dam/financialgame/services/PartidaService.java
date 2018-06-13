@@ -2,9 +2,7 @@ package com.dam.financialgame.services;
 
 import android.app.Activity;
 
-import com.dam.financialgame.controllers.Comunidad;
-
-import java.util.Date;
+import com.dam.financialgame.controllers.activities.Comunidad;
 
 // En esta interfaz se muestran los distintos servicios del objeto Service.
 public interface PartidaService {

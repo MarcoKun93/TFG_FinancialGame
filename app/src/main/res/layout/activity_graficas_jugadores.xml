@@ -39,7 +39,7 @@
 
                                         <fragment
                                             android:id="@+id/lineGraphFragment"
-                                            android:name="com.dam.financialgame.controllers.LineGraph"
+                                            android:name="com.dam.financialgame.controllers.fragments.LineGraph"
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:layout_marginTop="10dp"
@@ -55,7 +55,7 @@
 
                                         <fragment
                                             android:id="@+id/pieGraphFragment"
-                                            android:name="com.dam.financialgame.controllers.PieGraph"
+                                            android:name="com.dam.financialgame.controllers.fragments.PieGraph"
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:layout_marginTop="10dp"

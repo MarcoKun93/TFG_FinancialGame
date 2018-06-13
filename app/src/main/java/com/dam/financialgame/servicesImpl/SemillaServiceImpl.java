@@ -1,6 +1,5 @@
 package com.dam.financialgame.servicesImpl;
 
-import android.app.Activity;
 import android.util.Log;
 
 import com.android.volley.AuthFailureError;
@@ -9,8 +8,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.dam.financialgame.R;
-import com.dam.financialgame.controllers.Comunidad;
-import com.dam.financialgame.controllers.IntroducirDatos;
+import com.dam.financialgame.controllers.activities.Comunidad;
+import com.dam.financialgame.controllers.activities.IntroducirDatos;
 import com.dam.financialgame.model.Semilla;
 import com.dam.financialgame.services.SemillaService;
 import com.dam.financialgame.threads.VolleyApplication;

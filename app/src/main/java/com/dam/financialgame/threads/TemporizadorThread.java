@@ -6,7 +6,7 @@ import android.os.AsyncTask;
 import android.os.SystemClock;
 import android.util.Log;
 import com.dam.financialgame.R;
-import com.dam.financialgame.controllers.Escenario;
+import com.dam.financialgame.controllers.activities.Escenario;
 
 public class TemporizadorThread extends AsyncTask<Integer, Integer, Integer> {
 

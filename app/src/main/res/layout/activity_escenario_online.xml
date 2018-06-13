@@ -5,18 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_blanco"
-    tools:context="com.dam.financialgame.controllers.EscenarioOnline">
+    tools:context="com.dam.financialgame.controllers.activities.EscenarioOnline"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ListView
+        android:id="@+id/rankingEscenarioOnline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bordeverde"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="248dp"
-        android:text="Partida Empezada!!"
-        android:textColor="@color/colorAccent"
+        android:layout_marginStart="28dp"
+        android:fontFamily="serif"
+        android:text="Num rondas: "
+        android:textColor="@android:color/black"
         android:textSize="18sp"
-        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textoNumRondasOnline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="serif"
+        android:text="Salir de la partida"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textoNumRondasOnline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="49dp"
+        android:layout_marginStart="25dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/textView10" />
 </android.support.constraint.ConstraintLayout>

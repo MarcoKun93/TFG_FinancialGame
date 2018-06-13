@@ -36,7 +36,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/logrobronce" />
+                        app:srcCompat="@drawable/iconomedallabronce" />
 
                     <TextView
                         android:id="@+id/numeroLogrosBronce"
@@ -69,7 +69,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/logroplata" />
+                        app:srcCompat="@drawable/iconomedallaplata" />
 
                     <TextView
                         android:id="@+id/numerosLogrosPlata"
@@ -101,7 +101,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/logrooro" />
+                        app:srcCompat="@drawable/iconomedallaoro" />
 
                     <TextView
                         android:id="@+id/numeroLogrosOro"
@@ -129,7 +129,8 @@
                 android:id="@+id/listLogros"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp" />
+                android:layout_margin="5dp"
+                android:background="@drawable/bordeblanco" />
 
         </LinearLayout>
     </LinearLayout>

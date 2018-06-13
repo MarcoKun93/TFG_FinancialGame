@@ -2,8 +2,7 @@ package com.dam.financialgame.services;
 
 import android.app.Activity;
 
-import com.dam.financialgame.controllers.MenuDeInicio;
-import com.dam.financialgame.model.Usuario;
+import com.dam.financialgame.controllers.activities.MenuDeInicio;
 
 public interface UsuarioService {
 

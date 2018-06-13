@@ -16,7 +16,7 @@
     <string name="url_semilla">http://10.0.2.2:80/app.financialgame.com/v1/semilla/obtenerSemillas</string>
 
     <string name="pdf_instrucciones">instruccionesapp.pdf</string>
-    <string name="pdf_manualDeUsuario">ejemplomanualdeusuarioapp.pdf</string>
+    <string name="pdf_manualDeUsuario">manualusuario.pdf</string>
 
     // URL para servicios partida online
     <string name="url_get_partidas_online">http://10.0.2.2:80/app.financialgame.com/v1/partidaonline/partidasOnline</string>
@@ -33,14 +33,15 @@
 
     // Strings de los distintos estados de una partida online
     <string name="estado_partida_online_creada">0</string>
-    <string name="estado_partida_online_inicializada">1</string>
-    <string name="estado_partida_online_en_proceso">2</string>
-    <string name="estado_partida_online_en_espera">3</string>
-    <string name="estado_partida_online_finalizada">4</string>
+    <string name="estado_partida_online_en_proceso">1</string>
+    <string name="estado_partida_online_en_espera">2</string>
+    <string name="estado_partida_online_finalizada">3</string>
 
     // Strings de los distintos estados de un jugador online
     <string name="estado_jugador_creado">0</string>
     <string name="estado_jugador_preparado">1</string>
+    <string name="estado_jugador_en_espera">2</string>
+    <string name="estado_jugador_introduciendo_datos">3</string>
 
     // Para servidor hosting: https://tfgserviceses.000webhostapp.com/...
     // Para XAMPP: http://10.0.2.2:80/app.financialgame.com/...

@@ -7,7 +7,7 @@ import com.android.volley.toolbox.Volley;
 
 // La clase hará uso de un singleton para no tener que instanciarla cada vez que hagamos una petición, además
 // así sólo tenemos una cola de peticiones por aplicación. Heredamos de Application con este objetivo.
-public class VolleyApplication extends Application {
+public class    VolleyApplication extends Application {
     private static VolleyApplication volleyApplication;
     private RequestQueue requestQueue; // Objeto que procesa las peticiones.
 

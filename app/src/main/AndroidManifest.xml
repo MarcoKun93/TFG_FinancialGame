@@ -9,31 +9,31 @@
     <application
         android:name=".threads.VolleyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/financialgame_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/financialgame_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".controllers.InicializarPartida" />
-        <activity android:name=".controllers.MenuDeInicio" />
+        <activity android:name=".controllers.activities.InicializarPartida" />
+        <activity android:name=".controllers.activities.MenuDeInicio" />
         <activity
-            android:name=".controllers.Comunidad"
+            android:name=".controllers.activities.Comunidad"
             android:label="Comunidad" />
-        <activity android:name=".controllers.Escenario" />
-        <activity android:name=".controllers.IntroducirDatos" />
-        <activity android:name=".controllers.SplashScreenActivity">
+        <activity android:name=".controllers.activities.Escenario" />
+        <activity android:name=".controllers.activities.IntroducirDatos" />
+        <activity android:name=".controllers.activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controllers.GraficasJugadores" />
-        <activity android:name=".controllers.InstruccionesPartida" />
-        <activity android:name=".controllers.ManualDeUsuario" />
-        <activity android:name=".controllers.PrincipalPartidasOnline" />
-        <activity android:name=".controllers.PartidaOnlineInicializada" />
-        <activity android:name=".controllers.EscenarioOnline"></activity>
+        <activity android:name=".controllers.activities.GraficasJugadores" />
+        <activity android:name=".controllers.activities.InstruccionesPartida" />
+        <activity android:name=".controllers.activities.ManualDeUsuario" />
+        <activity android:name=".controllers.activities.PrincipalPartidasOnline" />
+        <activity android:name=".controllers.activities.PartidaOnlineInicializada" />
+        <activity android:name=".controllers.activities.EscenarioOnline"></activity>
     </application>
 
 </manifest>

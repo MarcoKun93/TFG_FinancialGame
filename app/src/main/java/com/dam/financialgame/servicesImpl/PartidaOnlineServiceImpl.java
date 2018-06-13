@@ -11,7 +11,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.dam.financialgame.R;
-import com.dam.financialgame.controllers.PrincipalPartidasOnline;
+import com.dam.financialgame.controllers.activities.PrincipalPartidasOnline;
 import com.dam.financialgame.model.PartidaOnline;
 import com.dam.financialgame.services.PartidaOnlineService;
 import com.dam.financialgame.threads.VolleyApplication;

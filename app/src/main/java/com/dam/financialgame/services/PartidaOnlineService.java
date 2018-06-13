@@ -2,7 +2,7 @@ package com.dam.financialgame.services;
 
 import android.app.Activity;
 
-import com.dam.financialgame.controllers.PrincipalPartidasOnline;
+import com.dam.financialgame.controllers.activities.PrincipalPartidasOnline;
 
 public interface PartidaOnlineService {
     // Metodo que obtengo las partidas online disponibles

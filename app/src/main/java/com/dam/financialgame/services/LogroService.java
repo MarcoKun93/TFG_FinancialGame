@@ -2,7 +2,7 @@ package com.dam.financialgame.services;
 
 import android.app.Activity;
 
-import com.dam.financialgame.controllers.Comunidad;
+import com.dam.financialgame.controllers.activities.Comunidad;
 
 // En esta interfaz se muestran los distintos servicios de la clase Logro.
 public interface LogroService {

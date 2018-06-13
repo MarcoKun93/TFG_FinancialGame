@@ -11,8 +11,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.dam.financialgame.R;
-import com.dam.financialgame.controllers.PartidaOnlineInicializada;
-import com.dam.financialgame.controllers.PrincipalPartidasOnline;
+import com.dam.financialgame.controllers.activities.EscenarioOnline;
+import com.dam.financialgame.controllers.activities.PartidaOnlineInicializada;
+import com.dam.financialgame.controllers.activities.PrincipalPartidasOnline;
 import com.dam.financialgame.model.JugadorOnline;
 import com.dam.financialgame.services.JugadorOnlineService;
 import com.dam.financialgame.threads.VolleyApplication;
@@ -90,6 +91,41 @@ public class JugadorOnlineServiceImpl implements JugadorOnlineService {
     }
 
     public void getJugadoresUnidos(final PartidaOnlineInicializada activity) {
+        JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.GET, activity.getResources().getString(R.string.url_obtener_jugadores_unidos), null,
+                new Response.Listener<JSONObject>()
+                {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        // Display response
+                        Log.d("Response: ", response.toString());
+
+                        // Pasamos al metodo correspondiente el array de jugadores online de la partida
+                        activity.muestraDatosJugadoresOnline(parseJson(response));
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("ERROR Response:", error.toString());
+                    }
+                }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+
+                params.put("authorization", AlmacenSesionImpl.getInstance(activity.getApplicationContext()).obtenerUsuarioLogeado().getClaveapi());
+
+                return params;
+            }
+        };
+
+        // Add it to the RequestQueue
+        VolleyApplication.getInstance().getRequestQueue().add(getRequest);
+    }
+
+    // Sobreescribimos el metodo anterior
+    public void getJugadoresUnidos(final EscenarioOnline activity) {
         JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.GET, activity.getResources().getString(R.string.url_obtener_jugadores_unidos), null,
                 new Response.Listener<JSONObject>()
                 {

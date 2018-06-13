@@ -11,7 +11,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.dam.financialgame.R;
-import com.dam.financialgame.controllers.Comunidad;
+import com.dam.financialgame.controllers.activities.Comunidad;
 import com.dam.financialgame.model.Logro;
 import com.dam.financialgame.services.LogroService;
 import com.dam.financialgame.threads.VolleyApplication;

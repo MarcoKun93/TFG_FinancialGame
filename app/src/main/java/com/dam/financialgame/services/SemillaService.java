@@ -1,10 +1,7 @@
 package com.dam.financialgame.services;
 
-import android.app.Activity;
-
-import com.dam.financialgame.controllers.Comunidad;
-import com.dam.financialgame.controllers.IntroducirDatos;
-import com.dam.financialgame.model.Semilla;
+import com.dam.financialgame.controllers.activities.Comunidad;
+import com.dam.financialgame.controllers.activities.IntroducirDatos;
 
 public interface SemillaService {
 
